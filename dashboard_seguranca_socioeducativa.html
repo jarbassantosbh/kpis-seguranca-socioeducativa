@@ -2,8 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Executivo de Eventos de Segurança - 2025 vs 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1120">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Painel Executivo de Eventos de Segurança - Departamento de Monitoria e Socioeducação | Instituto Elo</title>
     <!-- Chart.js local com fallback para CDN -->
     <script src="chart.umd.min.js"></script>
     <script>
@@ -537,6 +540,19 @@
             margin-right: 6px;
         }
 
+        
+        /* Quebra de linha inteligente para evitar corte no Quadro de Unidades */
+        #unitsSummaryTable {
+            width: 100%;
+        }
+        #unitsSummaryTable td:nth-child(3),
+        #unitsSummaryTable td:nth-child(5) {
+            white-space: normal;
+            line-height: 1.25;
+            min-width: 130px;
+            font-size: 0.76rem;
+        }
+
         /* Events breakdown table spacing without horizontal scroll */
         #eventsBreakdownTable {
             width: 100%;
@@ -726,22 +742,463 @@
             text-align: center;
         }
 
+        
+        /* CABEÇALHO DE IMPRESSÃO (Oculto em tela) */
+        .print-header {
+            display: none;
+        }
+
+        /* OTIMIZAÇÃO PARA DISPOSITIVOS MÓVEIS (CELULARES E TABLETS) */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 14px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .brand-section {
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .brand-logo {
+                max-height: 48px;
+            }
+
+            .brand-titles h1 {
+                font-size: 1.05rem;
+                line-height: 1.2;
+            }
+
+            .brand-titles p {
+                font-size: 0.72rem;
+            }
+
+            .controls-bar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                width: 100%;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 3px;
+                width: 100%;
+            }
+
+            .filter-group label {
+                font-size: 0.68rem;
+            }
+
+            select.filter-select {
+                width: 100%;
+                padding: 7px 24px 7px 8px;
+                font-size: 0.78rem;
+                height: 38px;
+            }
+
+            /* Período ocupa a largura total na grade móvel */
+            .controls-bar .filter-group:nth-child(3) {
+                grid-column: span 2;
+            }
+
+            .controls-bar .btn {
+                height: 38px;
+                justify-content: center;
+                font-size: 0.76rem;
+            }
+
+            .nav-tabs-bar {
+                padding: 6px 14px;
+            }
+
+            .nav-tabs-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+
+            .nav-tabs-left {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-tab-btn {
+                padding: 8px 12px;
+                font-size: 0.76rem;
+            }
+
+            .toggle-group {
+                width: 100%;
+                display: flex;
+            }
+
+            .toggle-btn {
+                flex: 1;
+                text-align: center;
+                font-size: 0.68rem;
+                padding: 6px 4px;
+            }
+
+            main {
+                padding: 12px 14px;
+            }
+
+            /* Resumo Executivo em celular */
+            .context-banner {
+                padding: 10px 12px;
+                margin-bottom: 14px;
+            }
+
+            .context-info p {
+                font-size: 0.86rem !important;
+                line-height: 1.4 !important;
+            }
+
+            .context-label {
+                font-size: 0.72rem !important;
+            }
+
+            /* Grid dos 4 KPIs: 2 colunas no celular (2x2) */
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px;
+                margin-bottom: 14px;
+            }
+
+            .kpi-card {
+                padding: 10px 12px;
+            }
+
+            .kpi-title {
+                font-size: 0.66rem;
+                margin-bottom: 4px;
+            }
+
+            .kpi-value {
+                font-size: 1.45rem;
+            }
+
+            .kpi-footer {
+                font-size: 0.68rem;
+                margin-top: 4px;
+                padding-top: 4px;
+            }
+
+            .section-block {
+                margin-bottom: 18px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .section-title {
+                font-size: 0.95rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.74rem;
+            }
+
+            .grid-2col, .grid-equal {
+                grid-template-columns: 1fr !important;
+                gap: 12px;
+            }
+
+            .panel-card {
+                padding: 12px;
+                border-radius: 6px;
+            }
+
+            .panel-title {
+                font-size: 0.85rem;
+            }
+
+            .chart-container {
+                min-height: 220px !important;
+                max-height: 270px !important;
+            }
+
+            /* Rolagem suave de tabelas no celular */
+            .table-wrapper {
+                margin: 0 -4px;
+                width: calc(100% + 8px);
+                border-radius: 4px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .dashboard-table th, .dashboard-table td {
+                padding: 6px 6px;
+                font-size: 0.72rem;
+            }
+
+            /* Congelamento da 1ª coluna na Matriz de Unidades para deslize tátil */
+            #unitEventMatrixTable th:first-child,
+            #unitEventMatrixTable td:first-child {
+                position: sticky;
+                left: 0;
+                background: #0f172a;
+                z-index: 3;
+                box-shadow: 2px 0 4px rgba(0, 0, 0, 0.4);
+            }
+
+            .powerbi-container {
+                height: calc(100vh - 220px);
+                min-height: 480px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .controls-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .controls-bar .filter-group:nth-child(3) {
+                grid-column: span 1;
+            }
+
+            .kpi-value {
+                font-size: 1.35rem;
+            }
+        }
+
+        /* OTIMIZAÇÃO PARA IMPRESSÃO (A4 PAISAGEM SEM CORTE DE DADOS) */
         @media print {
-            body { background: #fff !important; color: #000 !important; }
-            header, .nav-tabs-bar, .toggle-group, .btn, footer, .powerbi-container { display: none !important; }
-            #tabComparativo { display: block !important; }
-            .kpi-card, .panel-card, .context-banner {
-                border: 1px solid #ccc !important;
+            @page {
+                size: landscape;
+                margin: 8mm 6mm;
+            }
+
+            body {
+                background: #fff !important;
+                color: #000 !important;
+                font-size: 9pt !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            header, .nav-tabs-bar, .toggle-group, .btn, footer, .powerbi-container {
+                display: none !important;
+            }
+
+            #tabComparativo {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            main {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Cabeçalho formal na impressão */
+            .print-header {
+                display: block !important;
+                margin-bottom: 12px !important;
+            }
+
+            .print-header-inner {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-end !important;
+                border-bottom: 2px solid #0f172a !important;
+                padding-bottom: 8px !important;
+            }
+
+            .print-title {
+                font-size: 14pt !important;
+                font-weight: 800 !important;
+                color: #0f172a !important;
+                margin: 0 !important;
+                line-height: 1.2 !important;
+            }
+
+            .print-sub {
+                font-size: 9.5pt !important;
+                font-weight: 600 !important;
+                color: #334155 !important;
+                margin: 3px 0 0 0 !important;
+            }
+
+            .print-meta {
+                text-align: right !important;
+                font-size: 8.5pt !important;
+                color: #475569 !important;
+            }
+
+            .context-banner {
+                border: 1px solid #94a3b8 !important;
+                background: #f8fafc !important;
+                color: #0f172a !important;
+                padding: 8px 12px !important;
+                margin-bottom: 10px !important;
+                box-shadow: none !important;
+            }
+
+            .context-info p {
+                color: #0f172a !important;
+            }
+
+            .context-label {
+                color: #0284c7 !important;
+            }
+
+            .kpi-grid {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 8px !important;
+                margin-bottom: 12px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .kpi-card {
+                border: 1px solid #cbd5e1 !important;
                 background: #fff !important;
                 color: #000 !important;
                 box-shadow: none !important;
-                break-inside: avoid;
+                padding: 8px !important;
+                break-inside: avoid !important;
             }
-            .kpi-value, .panel-title, .section-title, h2, h1 { color: #000 !important; }
-            .dashboard-table thead th, .dashboard-table tfoot td { background: #e2e8f0 !important; color: #000 !important; }
-            .dashboard-table tbody tr { background: #fff !important; }
-            .dashboard-table td { color: #000 !important; border-bottom: 1px solid #ddd !important; }
+
+            .kpi-title {
+                color: #475569 !important;
+                font-size: 7pt !important;
+            }
+
+            .kpi-value {
+                color: #0f172a !important;
+                font-size: 1.35rem !important;
+            }
+
+            .kpi-footer {
+                color: #64748b !important;
+                border-top: 1px solid #e2e8f0 !important;
+            }
+
+            .section-block {
+                margin-bottom: 14px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .section-title {
+                color: #0f172a !important;
+                font-size: 11pt !important;
+            }
+
+            .section-subtitle {
+                color: #475569 !important;
+            }
+
+            .panel-card {
+                border: 1px solid #cbd5e1 !important;
+                background: #fff !important;
+                box-shadow: none !important;
+                padding: 8px !important;
+                margin-bottom: 8px !important;
+                break-inside: avoid !important;
+            }
+
+            .panel-title {
+                color: #0f172a !important;
+                font-size: 9.5pt !important;
+            }
+
+            .chart-container {
+                max-height: 180px !important;
+                min-height: 180px !important;
+            }
+
+            /* Tabelas sem corte de dados: 100% de largura e quebra de texto */
+            .table-wrapper {
+                overflow: visible !important;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .dashboard-table {
+                width: 100% !important;
+                table-layout: fixed !important;
+                border-collapse: collapse !important;
+                border-spacing: 0 !important;
+            }
+
+            .dashboard-table thead th {
+                background: #e2e8f0 !important;
+                color: #0f172a !important;
+                font-size: 7.2pt !important;
+                padding: 4px 4px !important;
+                border: 1px solid #cbd5e1 !important;
+                white-space: normal !important;
+                word-wrap: break-word !important;
+                line-height: 1.15 !important;
+            }
+
+            .dashboard-table tbody tr {
+                background: #fff !important;
+            }
+
+            .dashboard-table td {
+                color: #0f172a !important;
+                font-size: 7.2pt !important;
+                padding: 4px 4px !important;
+                border: 1px solid #e2e8f0 !important;
+                white-space: normal !important;
+                word-wrap: break-word !important;
+                line-height: 1.15 !important;
+            }
+
+            .dashboard-table tfoot td {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                font-size: 7.5pt !important;
+                font-weight: 800 !important;
+                border-top: 2px solid #0f172a !important;
+            }
+
+            /* Quadro Comparativo por Unidade: larguras proporcionais para caber 100% */
+            #unitsSummaryTable th:nth-child(1), #unitsSummaryTable td:nth-child(1) { width: 17% !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(2), #unitsSummaryTable td:nth-child(2) { width: 6% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(3), #unitsSummaryTable td:nth-child(3) { width: 22% !important; font-size: 6.8pt !important; }
+            #unitsSummaryTable th:nth-child(4), #unitsSummaryTable td:nth-child(4) { width: 6% !important; text-align: right !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(5), #unitsSummaryTable td:nth-child(5) { width: 22% !important; font-size: 6.8pt !important; }
+            #unitsSummaryTable th:nth-child(6), #unitsSummaryTable td:nth-child(6) { width: 7% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(7), #unitsSummaryTable td:nth-child(7) { width: 7% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(8), #unitsSummaryTable td:nth-child(8) { width: 6% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(9), #unitsSummaryTable td:nth-child(9) { width: 7% !important; text-align: center !important; font-size: 6.2pt !important; }
+
+            /* Quadro de Eventos na Impressão */
+            #eventsBreakdownTable th:nth-child(1), #eventsBreakdownTable td:nth-child(1) { width: 28% !important; }
+            #eventsBreakdownTable th:nth-child(2), #eventsBreakdownTable td:nth-child(2) { width: 8% !important; }
+            #eventsBreakdownTable th:nth-child(3), #eventsBreakdownTable td:nth-child(3) { width: 8% !important; }
+            #eventsBreakdownTable th:nth-child(4), #eventsBreakdownTable td:nth-child(4) { width: 8% !important; }
+            #eventsBreakdownTable th:nth-child(5), #eventsBreakdownTable td:nth-child(5) { width: 10% !important; }
+            #eventsBreakdownTable th:nth-child(6), #eventsBreakdownTable td:nth-child(6) { width: 10% !important; }
+            #eventsBreakdownTable th:nth-child(7), #eventsBreakdownTable td:nth-child(7) { width: 28% !important; }
+
+            /* Matriz na Impressão */
+            #unitEventMatrixTable th, #unitEventMatrixTable td {
+                font-size: 5.8pt !important;
+                padding: 2px 1px !important;
+            }
         }
+
     </style>
 </head>
 <body>
@@ -809,6 +1266,19 @@
     <main>
 
         <div id="tabComparativo" class="tab-pane active">
+            <!-- CABEÇALHO EXCLUSIVO DE IMPRESSÃO -->
+            <div class="print-header">
+                <div class="print-header-inner">
+                    <div>
+                        <h1 class="print-title">Painel Executivo de Eventos de Segurança</h1>
+                        <p class="print-sub">Departamento de Monitoria e Socioeducação | Instituto Elo</p>
+                    </div>
+                    <div class="print-meta">
+                        <span>Estudo Homólogo: Janeiro a Outubro (2025 vs 2026)</span>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- RESUMO EXECUTIVO (TEXTO DINÂMICO E SIMPLIFICADO) -->
             <div class="context-banner">
