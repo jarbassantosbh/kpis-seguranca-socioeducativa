@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+Thumbs.db
+.agents/mcp_config.json
+.agents/skills/google-stitch/scripts/stitch_client.js
+backup_v2.0.0/
+backup_v2.1.0/
+backup_v2.1.0_completo.zip

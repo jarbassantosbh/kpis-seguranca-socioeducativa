@@ -1,0 +1,26 @@
+{
+  "name": "kpi-seguranca-socioeducativa",
+  "version": "2.0.0",
+  "description": "Dashboard Executivo e Painel de Gestão de Eventos de Segurança Socioeducativa - Instituto Elo",
+  "main": "GoogleAppsScript/Code.js",
+  "scripts": {
+    "test-syntax": "node -c GoogleAppsScript/Code.js",
+    "push-dev": "npx @google/clasp push -f",
+    "deploy-prod": "npx @google/clasp deploy",
+    "status": "npx @google/clasp status"
+  },
+  "keywords": [
+    "socioeducativo",
+    "kpi",
+    "seguranca",
+    "instituto-elo",
+    "google-apps-script",
+    "dashboard"
+  ],
+  "author": "Instituto Elo",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
+

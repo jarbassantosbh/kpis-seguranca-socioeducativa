@@ -1,0 +1,16 @@
+{
+  "scriptId": "1PEM_TJ7gTmQOy4Uf47knhGLf9Y29B9N7rU2q2D-mggCRrqTmAzqtDsb_",
+  "rootDir": "GoogleAppsScript",
+  "scriptExtensions": [
+    ".js",
+    ".gs"
+  ],
+  "htmlExtensions": [
+    ".html"
+  ],
+  "jsonExtensions": [
+    ".json"
+  ],
+  "filePushOrder": [],
+  "skipSubdirectories": false
+}
