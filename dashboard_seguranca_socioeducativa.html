@@ -815,7 +815,7 @@
                 <div class="context-info" style="width: 100%;">
                     <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #f1f5f9;">
                         <span class="context-label">Resumo Executivo:</span>
-                        <span id="execSummaryDynamicText" style="margin-left: 6px;">As Unidades Socioeducativas tiveram no consolidado um aumento de 65,9% (▲ 166) de Eventos de Segurança no período acumulado de 10 meses.</span>
+                        <span id="execSummaryDynamicText" style="margin-left: 6px;">As Unidades Socioeducativas tiveram no consolidado um aumento de 65,9% (▲ 166) de Eventos de Segurança no acumulado de 10 meses em 2026.</span>
                     </p>
                 </div>
             </div>
@@ -8343,6 +8343,47 @@
         let categoryChartInst = null;
         let benchmarkChartInst = null;
 
+        // Plugin oficial de rótulos com a cor do ano (2026: #38bdf8 | 2025: #94a3b8)
+        var chartValueLabelsPlugin = {
+            id: 'chartValueLabels',
+            afterDatasetsDraw: function(chart) {
+                var ctx = chart.ctx;
+                chart.data.datasets.forEach(function(dataset, datasetIndex) {
+                    var meta = chart.getDatasetMeta(datasetIndex);
+                    if (!meta || meta.hidden) return;
+
+                    var is2026 = dataset.label === '2026';
+                    var textColor = is2026 ? '#38bdf8' : '#94a3b8';
+
+                    meta.data.forEach(function(element, index) {
+                        var val = dataset.data[index];
+                        if (val === undefined || val === null || val === 0) return;
+
+                        ctx.save();
+                        ctx.font = '700 11px "Inter", -apple-system, sans-serif';
+                        ctx.fillStyle = textColor;
+
+                        if (chart.options.indexAxis === 'y') {
+                            ctx.textAlign = 'left';
+                            ctx.textBaseline = 'middle';
+                            ctx.fillText(val, element.x + 6, element.y);
+                        } else if (chart.config.type === 'line') {
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            var yOffset = is2026 ? -11 : 13;
+                            ctx.fillText(val, element.x, element.y + yOffset);
+                        } else {
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'bottom';
+                            ctx.fillText(val, element.x, element.y - 4);
+                        }
+                        ctx.restore();
+                    });
+                });
+            }
+        };
+
+
         window.addEventListener('DOMContentLoaded', () => {
             initFilters();
             renderAll();
@@ -8657,15 +8698,17 @@
             let periodo = '';
             if (month === 'ALL') {
                 const nMonths = getActiveMonths().length;
-                periodo = 'no período acumulado de ' + nMonths + ' meses.';
+                periodo = 'no acumulado de ' + nMonths + ' meses em 2026.';
             } else {
-                periodo = 'no mês de ' + month + '.';
+                periodo = 'em ' + month + ' de 2026.';
             }
 
             return sujeito + variacao + evento + periodo;
         }
 
         function updateContextAndKPIs() {
+            const stats = getSummaryMetrics(currentUnit, currentEvent);
+
             const summaryEl = document.getElementById('execSummaryDynamicText');
             if (summaryEl) {
                 summaryEl.innerHTML = generateExecutiveSummaryText(currentUnit, currentEvent, currentMonth);
@@ -8723,49 +8766,6 @@
         }
 
         
-        // Plugin oficial de rótulos com a cor do ano (2026: #38bdf8 | 2025: #94a3b8)
-        const chartValueLabelsPlugin = {
-            id: 'chartValueLabels',
-            afterDatasetsDraw(chart) {
-                const { ctx } = chart;
-                chart.data.datasets.forEach((dataset, datasetIndex) => {
-                    const meta = chart.getDatasetMeta(datasetIndex);
-                    if (!meta || meta.hidden) return;
-
-                    const is2026 = dataset.label === '2026';
-                    const textColor = is2026 ? '#38bdf8' : '#94a3b8';
-
-                    meta.data.forEach((element, index) => {
-                        const val = dataset.data[index];
-                        if (val === undefined || val === null || val === 0) return;
-
-                        ctx.save();
-                        ctx.font = '700 11px "Inter", -apple-system, sans-serif';
-                        ctx.fillStyle = textColor;
-
-                        if (chart.options.indexAxis === 'y') {
-                            // Barra horizontal (Demonstrativo de Eventos)
-                            ctx.textAlign = 'left';
-                            ctx.textBaseline = 'middle';
-                            ctx.fillText(val, element.x + 6, element.y);
-                        } else if (chart.config.type === 'line') {
-                            // Linha (Comparativo Mensal)
-                            ctx.textAlign = 'center';
-                            ctx.textBaseline = 'middle';
-                            const yOffset = is2026 ? -11 : 13;
-                            ctx.fillText(val, element.x, element.y + yOffset);
-                        } else {
-                            // Barra vertical (Comparativo Absoluto / Unidades ou Mês Único)
-                            ctx.textAlign = 'center';
-                            ctx.textBaseline = 'bottom';
-                            ctx.fillText(val, element.x, element.y - 4);
-                        }
-                        ctx.restore();
-                    });
-                });
-            }
-        };
-
         function renderCategoryChart() {
             const ctx = document.getElementById('categoryBarChart').getContext('2d');
             let events = getEventsBreakdown(currentUnit);
