@@ -1,5 +1,5 @@
 # 🎨 Design System & Diretrizes de UI/UX - Dashboard de Segurança Socioeducativa
-**Instituto Elo - Versão Oficial Vigente: 2.0.0**  
+**Instituto Elo - Versão Oficial Vigente: 2.3.0**  
 *Documento canônico de Design Tokens para uso com Google Stitch e Engenharia de Frontend.*
 
 ---

@@ -1,6 +1,6 @@
 {
   "name": "kpi-seguranca-socioeducativa",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "description": "Dashboard Executivo e Painel de Gestão de Eventos de Segurança Socioeducativa - Instituto Elo",
   "main": "GoogleAppsScript/Code.js",
   "scripts": {
@@ -23,4 +23,3 @@
     "eslint": "^8.57.0"
   }
 }
-

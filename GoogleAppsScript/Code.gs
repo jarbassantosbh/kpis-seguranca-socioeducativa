@@ -11,7 +11,7 @@ function doGet(e) {
   
   // Avalia o template e configura viewport responsivo e título
   var output = template.evaluate()
-    .setTitle('Painel Executivo de Segurança - Unidades Socioeducativas')
+    .setTitle('Painel Executivo de Eventos de Segurança')
     .addMetaTag('viewport', 'width=device-width, initial-scale=1.0')
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
     
@@ -30,8 +30,8 @@ function include(filename) {
  */
 function getSecurityMetadata() {
   return {
-    titulo: "Painel de Gestão e Segurança Socioeducativa",
-    versao: "2.0.0",
+    titulo: "Painel Executivo de Eventos de Segurança",
+    versao: "2.3.0",
     periodoComparativo: "Jan-Out 2025 vs Jan-Out 2026",
     totalUnidades: 13,
     powerBi2025Url: "https://app.powerbi.com/view?r=eyJrIjoiNDRkZDFkZTEtZjhjNy00MWUyLWFiYWMtMTI5ZTk1OTA1YjNlIiwidCI6IjhmZTFiMzYwLTFmNzYtNDBhNS1iOTlmLWU4NzZkYjhhZjdkNyJ9",

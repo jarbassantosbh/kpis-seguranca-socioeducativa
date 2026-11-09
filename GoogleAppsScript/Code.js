@@ -31,11 +31,10 @@ function include(filename) {
 function getSecurityMetadata() {
   return {
     titulo: "Painel Executivo de Eventos de Segurança",
-    versao: "2.2.0",
+    versao: "2.3.0",
     periodoComparativo: "Jan-Out 2025 vs Jan-Out 2026",
     totalUnidades: 13,
     powerBi2025Url: "https://app.powerbi.com/view?r=eyJrIjoiNDRkZDFkZTEtZjhjNy00MWUyLWFiYWMtMTI5ZTk1OTA1YjNlIiwidCI6IjhmZTFiMzYwLTFmNzYtNDBhNS1iOTlmLWU4NzZkYjhhZjdkNyJ9",
     powerBi2026Url: "https://app.powerbi.com/view?r=eyJrIjoiMDAxMjcxY2ItNWE2Ny00MjkwLWI5NTUtYmM1YWFmZWI0MTE1IiwidCI6IjhmZTFiMzYwLTFmNzYtNDBhNS1iOTlmLWU4NzZkYjhhZjdkNyJ9"
   };
 }
-

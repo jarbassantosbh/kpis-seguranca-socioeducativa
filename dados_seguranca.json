@@ -1,18 +1,18 @@
 {
     "unidades":  [
-                     "Araxá",
-                     "Contagem",
-                     "Ipatinga",
-                     "Lindóia",
-                     "Passos",
-                     "Santa Clara",
-                     "Santa Helena",
-                     "São Benedito",
-                     "São Jerônimo",
-                     "Sete Lagoas",
-                     "Tupaciguara",
-                     "Uberaba",
-                     "Unaí"
+                     "CEIP Araxá",
+                     "CEIP Contagem",
+                     "CEIP São Benedito",
+                     "CEIP Sete Lagoas",
+                     "CSE Ipatinga",
+                     "CSE Lindéia",
+                     "CSE Passos",
+                     "CSE Santa Clara",
+                     "CSE Santa Helena",
+                     "CSE São Jerônimo",
+                     "CSE Tupaciguara",
+                     "CSE Uberaba",
+                     "CSE Unaí"
                  ],
     "meses_2025":  [
                        "Janeiro",
@@ -43,7 +43,7 @@
     "data2025":  [
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -68,7 +68,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -93,7 +93,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -118,7 +118,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -143,7 +143,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -168,7 +168,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -193,7 +193,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -218,7 +218,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -243,7 +243,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -268,7 +268,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -293,7 +293,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -318,7 +318,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -343,7 +343,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -368,7 +368,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -393,7 +393,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -418,7 +418,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -443,7 +443,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -468,7 +468,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -493,7 +493,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -518,7 +518,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -543,7 +543,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -568,7 +568,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -593,7 +593,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -618,7 +618,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -643,7 +643,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Janeiro",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -668,7 +668,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -693,7 +693,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -718,7 +718,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -743,7 +743,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -768,7 +768,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -793,7 +793,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -818,7 +818,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -843,7 +843,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -868,7 +868,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -893,7 +893,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -918,7 +918,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -943,7 +943,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -968,7 +968,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -993,7 +993,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1018,7 +1018,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1043,7 +1043,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1068,7 +1068,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1093,7 +1093,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1118,7 +1118,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1143,7 +1143,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1168,7 +1168,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1193,7 +1193,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1218,7 +1218,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1243,7 +1243,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1268,7 +1268,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1293,7 +1293,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1318,7 +1318,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1343,7 +1343,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1368,7 +1368,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1393,7 +1393,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1418,7 +1418,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1443,7 +1443,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1468,7 +1468,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1493,7 +1493,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1518,7 +1518,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Dezembro",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -1543,7 +1543,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1568,7 +1568,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Fevereiro",
                          "fuga_interna":  2,
                          "fuga_externa":  0,
@@ -1593,7 +1593,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1618,7 +1618,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Abril",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -1643,7 +1643,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Maio",
                          "fuga_interna":  2,
                          "fuga_externa":  0,
@@ -1668,7 +1668,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1693,7 +1693,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1718,7 +1718,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1743,7 +1743,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Setembro",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -1768,7 +1768,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1793,7 +1793,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1818,7 +1818,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1843,7 +1843,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1868,7 +1868,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1893,7 +1893,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1918,7 +1918,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1943,7 +1943,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1968,7 +1968,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -1993,7 +1993,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2018,7 +2018,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2043,7 +2043,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2068,7 +2068,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2093,7 +2093,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2118,7 +2118,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Dezembro",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -2143,7 +2143,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2168,7 +2168,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2193,7 +2193,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2218,7 +2218,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2243,7 +2243,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2268,7 +2268,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Junho",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -2293,7 +2293,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Julho",
                          "fuga_interna":  1,
                          "fuga_externa":  0,
@@ -2318,7 +2318,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2343,7 +2343,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2368,7 +2368,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2393,7 +2393,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2418,7 +2418,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2443,7 +2443,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2468,7 +2468,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2493,7 +2493,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2518,7 +2518,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2543,7 +2543,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2568,7 +2568,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2593,7 +2593,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2618,7 +2618,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2643,7 +2643,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2668,7 +2668,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2693,7 +2693,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2718,7 +2718,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2743,7 +2743,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2768,7 +2768,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2793,7 +2793,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2818,7 +2818,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2843,7 +2843,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2868,7 +2868,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2893,7 +2893,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2918,7 +2918,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2943,7 +2943,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2968,7 +2968,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -2993,7 +2993,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3018,7 +3018,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3043,7 +3043,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3068,7 +3068,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3093,7 +3093,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3118,7 +3118,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3143,7 +3143,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3168,7 +3168,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3193,7 +3193,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3218,7 +3218,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3243,7 +3243,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3268,7 +3268,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3293,7 +3293,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3318,7 +3318,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3343,7 +3343,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3368,7 +3368,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3393,7 +3393,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3418,7 +3418,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3443,7 +3443,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Maio",
                          "fuga_interna":  2,
                          "fuga_externa":  0,
@@ -3468,7 +3468,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3493,7 +3493,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3518,7 +3518,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3543,7 +3543,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3568,7 +3568,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3593,7 +3593,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3618,7 +3618,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3643,7 +3643,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3668,7 +3668,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3693,7 +3693,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3718,7 +3718,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3743,7 +3743,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3768,7 +3768,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3793,7 +3793,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3818,7 +3818,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3843,7 +3843,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3868,7 +3868,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3893,7 +3893,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Novembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3918,7 +3918,7 @@
                      },
                      {
                          "ano":  2025,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Dezembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3945,7 +3945,7 @@
     "data2026":  [
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3970,7 +3970,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -3995,7 +3995,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4020,7 +4020,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4045,7 +4045,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4070,7 +4070,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4095,7 +4095,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4120,7 +4120,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4145,7 +4145,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4170,7 +4170,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Araxá",
+                         "unidade":  "CEIP Araxá",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4195,7 +4195,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4220,7 +4220,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4245,7 +4245,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4270,7 +4270,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4295,7 +4295,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4320,7 +4320,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4345,7 +4345,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4370,7 +4370,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4395,7 +4395,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4420,7 +4420,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Contagem",
+                         "unidade":  "CEIP Contagem",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4445,7 +4445,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4470,7 +4470,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4495,7 +4495,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4520,7 +4520,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4545,7 +4545,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4570,7 +4570,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4595,7 +4595,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4620,7 +4620,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4645,7 +4645,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4670,7 +4670,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Ipatinga",
+                         "unidade":  "CSE Ipatinga",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4695,7 +4695,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4720,7 +4720,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4745,7 +4745,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4770,7 +4770,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4795,7 +4795,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4820,7 +4820,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4845,7 +4845,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4870,7 +4870,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4895,7 +4895,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4920,7 +4920,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Lindóia",
+                         "unidade":  "CSE Lindéia",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4945,7 +4945,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4970,7 +4970,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -4995,7 +4995,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5020,7 +5020,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5045,7 +5045,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5070,7 +5070,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5095,7 +5095,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5120,7 +5120,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5145,7 +5145,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5170,7 +5170,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Passos",
+                         "unidade":  "CSE Passos",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5195,7 +5195,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5220,7 +5220,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5245,7 +5245,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5270,7 +5270,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5295,7 +5295,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5320,7 +5320,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5345,7 +5345,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5370,7 +5370,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5395,7 +5395,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5420,7 +5420,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Clara",
+                         "unidade":  "CSE Santa Clara",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5445,7 +5445,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5470,7 +5470,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5495,7 +5495,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5520,7 +5520,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5545,7 +5545,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5570,7 +5570,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5595,7 +5595,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5620,7 +5620,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5645,7 +5645,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5670,7 +5670,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Santa Helena",
+                         "unidade":  "CSE Santa Helena",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5695,7 +5695,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5720,7 +5720,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5745,7 +5745,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5770,7 +5770,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5795,7 +5795,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5820,7 +5820,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5845,7 +5845,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5870,7 +5870,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5895,7 +5895,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5920,7 +5920,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Benedito",
+                         "unidade":  "CEIP São Benedito",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5945,7 +5945,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5970,7 +5970,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -5995,7 +5995,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6020,7 +6020,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6045,7 +6045,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6070,7 +6070,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6095,7 +6095,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6120,7 +6120,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6145,7 +6145,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6170,7 +6170,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "São Jerônimo",
+                         "unidade":  "CSE São Jerônimo",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6195,7 +6195,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6220,7 +6220,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6245,7 +6245,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6270,7 +6270,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6295,7 +6295,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6320,7 +6320,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6345,7 +6345,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6370,7 +6370,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6395,7 +6395,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6420,7 +6420,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Sete Lagoas",
+                         "unidade":  "CEIP Sete Lagoas",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6445,7 +6445,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6470,7 +6470,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6495,7 +6495,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6520,7 +6520,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6545,7 +6545,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6570,7 +6570,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6595,7 +6595,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6620,7 +6620,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6645,7 +6645,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6670,7 +6670,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Tupaciguara",
+                         "unidade":  "CSE Tupaciguara",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6695,7 +6695,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6720,7 +6720,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6745,7 +6745,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6770,7 +6770,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6795,7 +6795,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6820,7 +6820,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6845,7 +6845,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6870,7 +6870,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6895,7 +6895,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6920,7 +6920,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Uberaba",
+                         "unidade":  "CSE Uberaba",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6945,7 +6945,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Janeiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6970,7 +6970,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Fevereiro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -6995,7 +6995,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Março",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7020,7 +7020,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Abril",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7045,7 +7045,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Maio",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7070,7 +7070,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Junho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7095,7 +7095,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Julho",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7120,7 +7120,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Agosto",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7145,7 +7145,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Setembro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
@@ -7170,7 +7170,7 @@
                      },
                      {
                          "ano":  2026,
-                         "unidade":  "Unaí",
+                         "unidade":  "CSE Unaí",
                          "mes":  "Outubro",
                          "fuga_interna":  0,
                          "fuga_externa":  0,
