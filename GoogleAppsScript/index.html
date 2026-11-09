@@ -238,48 +238,20 @@
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--accent-blue);
             border-radius: 6px;
-            padding: 10px 18px;
+            padding: 12px 18px;
             margin-bottom: 18px;
             display: flex;
             align-items: center;
-        }
-
-        .context-info h2 {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: 0;
-            line-height: 1.35;
+            box-shadow: var(--shadow-sm);
         }
 
         .context-label {
-            font-size: 0.78rem;
+            font-size: 0.80rem;
             font-weight: 800;
             color: var(--accent-blue);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-        }
-
-        .context-unit {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #ffffff;
-        }
-
-        .context-sep {
-            color: #475569;
-            margin: 0 4px;
-            font-size: 0.85rem;
-        }
-
-        .context-desc {
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-            font-weight: 500;
+            display: inline-block;
         }
 
         .context-meta {
@@ -832,16 +804,13 @@
 
         <div id="tabComparativo" class="tab-pane active">
 
-            <!-- CONTEXT BANNER (LIMPO E SIMPLIFICADO) -->
+            <!-- RESUMO EXECUTIVO (TEXTO DINÂMICO E SIMPLIFICADO) -->
             <div class="context-banner">
-                <div class="context-info">
-                    <h2 id="currentContextTitle">
+                <div class="context-info" style="width: 100%;">
+                    <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: #f1f5f9;">
                         <span class="context-label">Resumo Executivo:</span>
-                        <span class="context-unit">Unidades Socioeducativas</span>
-                        <span class="context-sep">•</span>
-                        <span class="context-desc">No consolidado houve</span>
-                        <span class="context-badge badge-danger">aumento de 0% (0)</span>
-                    </h2>
+                        <span id="execSummaryDynamicText" style="margin-left: 6px;">As Unidades Socioeducativas tiveram no consolidado um aumento de 65,9% (▲ 166) de Eventos de Segurança no período acumulado de 10 meses.</span>
+                    </p>
                 </div>
             </div>
 
@@ -8645,36 +8614,57 @@
             }
         }
 
-        function updateContextAndKPIs() {
-            const titleEl = document.getElementById('currentContextTitle');
+        
+        function generateExecutiveSummaryText(unit, event, month) {
+            const stats = getSummaryMetrics(unit, event);
 
-            const eventLabel = currentEvent === 'ALL' ? 'Todos os Eventos de Segurança' : EVENT_LABELS[currentEvent];
-            const stats = getSummaryMetrics(currentUnit, currentEvent);
-            const sign = stats.diff > 0 ? '+' : '';
-            const unitLabel = currentUnit === 'ALL' ? 'Unidades Socioeducativas' : currentUnit;
-
-            // Formato solicitado: Todos os Eventos de Segurança | +65.9% (+166) - Unidades Socioeducativas
-                        // Resumo Executivo: [UNIDADE] | No consolidado houve aumento de [TOTAL CONSOLIDADO DE VAR.(%) - DIR(^)] - [EVENTO]
-            let badgeHtml = '';
-            if (stats.diff > 0) {
-                badgeHtml = '<span class="context-badge badge-danger">aumento de +' + stats.pct + '% (▲ ' + stats.diff + ')</span>';
-            } else if (stats.diff < 0) {
-                badgeHtml = '<span class="context-badge badge-success">redução de ' + stats.pct + '% (▼ ' + stats.diff + ')</span>';
+            // 1. Sujeito
+            let sujeito = '';
+            if (unit === 'ALL') {
+                sujeito = 'As Unidades Socioeducativas tiveram no consolidado ';
             } else {
-                badgeHtml = '<span class="context-badge badge-info">estabilidade (0%)</span>';
+                sujeito = 'A unidade ' + unit + ' teve no consolidado ';
             }
 
-            const eventBadge = currentEvent === 'ALL' ? '' : '<span class="context-badge badge-info" style="margin-left: 4px;">' + EVENT_LABELS[currentEvent] + '</span>';
+            // 2. Variação
+            let variacao = '';
+            const pctVal = Math.abs(stats.pct).toFixed(1).replace('.', ',');
+            const diffVal = Math.abs(stats.diff);
 
-            titleEl.innerHTML =
-                '<span class="context-label">Resumo Executivo:</span> ' +
-                '<span class="context-unit">' + unitLabel + '</span> ' +
-                '<span class="context-sep">•</span> ' +
-                '<span class="context-desc">No consolidado houve</span> ' +
-                badgeHtml +
-                eventBadge;
+            if (stats.diff > 0) {
+                variacao = 'um aumento de <strong style="color:#f87171;">' + pctVal + '% (▲ ' + diffVal + ')</strong> ';
+            } else if (stats.diff < 0) {
+                variacao = 'uma redução de <strong style="color:#34d399;">' + pctVal + '% (▼ ' + diffVal + ')</strong> ';
+            } else {
+                variacao = '<strong style="color:#cbd5e1;">estabilidade (0%)</strong> ';
+            }
 
-            // Estatísticas da Seção 1 (Média e Mediana Mensal 2026)
+            // 3. Evento
+            let evento = '';
+            if (event === 'ALL') {
+                evento = 'de Eventos de Segurança ';
+            } else {
+                evento = 'de ' + EVENT_LABELS[event] + ' ';
+            }
+
+            // 4. Período
+            let periodo = '';
+            if (month === 'ALL') {
+                const nMonths = getActiveMonths().length;
+                periodo = 'no período acumulado de ' + nMonths + ' meses.';
+            } else {
+                periodo = 'no mês de ' + month + '.';
+            }
+
+            return sujeito + variacao + evento + periodo;
+        }
+
+        function updateContextAndKPIs() {
+            const summaryEl = document.getElementById('execSummaryDynamicText');
+            if (summaryEl) {
+                summaryEl.innerHTML = generateExecutiveSummaryText(currentUnit, currentEvent, currentMonth);
+            }
+
             updateSection1Stats();
 
             // KPI 1 & 2: Ocorrências: 2026 e Ocorrências: 2025
