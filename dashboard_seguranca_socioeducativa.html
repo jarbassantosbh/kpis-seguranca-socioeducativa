@@ -83,7 +83,7 @@
         }
 
         .brand-logo {
-            max-height: 44px;
+            max-height: 58px;
             width: auto;
             object-fit: contain;
             filter: brightness(0) invert(1);
@@ -817,7 +817,7 @@
             <div class="context-banner">
                 <div class="context-info">
                     <h2>
-                        <span id="currentContextTitle">Todos os Eventos de Segurança | 0% (0) - Unidades Socioeducativas</span>
+                        <span id="currentContextTitle">Resumo Executivo: Unidades Socioeducativas | No consolidado houve aumento de 0% (0)</span>
                     </h2>
                 </div>
             </div>
@@ -890,7 +890,7 @@
                     <div class="panel-card">
                         <div class="panel-header">
                             <div>
-                                <div class="panel-title" id="tableEventsTitle">Quadro Comparativo de Eventos de Segurança</div>
+                                <div class="panel-title" id="tableEventsTitle">Quadro Comparativo de Eventos de Segurança (2025 - 2026)</div>
                             </div>
                         </div>
                         <div class="table-wrapper">
@@ -930,7 +930,7 @@
                 <div class="panel-card" style="margin-bottom: 16px;">
                     <div class="panel-header">
                         <div>
-                            <div class="panel-title" id="benchmarkChartTitle">Comparativo por Unidade - Todos os Eventos de Segurança</div>
+                            <div class="panel-title" id="benchmarkChartTitle">Comparativo Absoluto (2025 - 2026)</div>
                         </div>
                     </div>
                     <div class="chart-container" style="min-height: 320px;">
@@ -941,7 +941,7 @@
                 <div class="panel-card">
                     <div class="panel-header">
                         <div>
-                            <div class="panel-title" id="unitsTableTitle">Comparativo por Unidade - Todos os Eventos de Segurança</div>
+                            <div class="panel-title" id="unitsTableTitle">Quadro Comparativo por Unidade (2025 - 2026)</div>
                         </div>
                     </div>
                     <div class="table-wrapper">
@@ -970,7 +970,7 @@
             <div class="section-block">
                 <div class="section-header">
                     <div>
-                        <div class="section-title">3. Comparativo por Evento de Segurança</div>
+                        <div class="section-title">3. Comparativo por Evento de Segurança (2025 - 2026)</div>
                     </div>
                     <div class="toggle-group">
                         <button id="btnMatComp" class="toggle-btn active" onclick="setMatrixMode('COMP')">Comparativo (2025 vs 2026)</button>
@@ -8608,8 +8608,18 @@
             const sign = stats.diff > 0 ? '+' : '';
             const unitLabel = currentUnit === 'ALL' ? 'Unidades Socioeducativas' : currentUnit;
 
-            // Formato solicitado: Todos os Eventos de Segurança | +65.9% (+166) - Unidades Socioeducativas
-            titleEl.textContent = eventLabel + ' | ' + sign + stats.pct + '% (' + sign + stats.diff + ') - ' + unitLabel;
+            // Resumo Executivo: [UNIDADE] | No consolidado houve aumento de [TOTAL CONSOLIDADO DE VAR.(%) - DIR(^)] - [EVENTO]
+            let varTexto = '';
+            if (stats.diff > 0) {
+                varTexto = 'aumento de +' + stats.pct + '% (▲ +' + stats.diff + ')';
+            } else if (stats.diff < 0) {
+                varTexto = 'redução de ' + stats.pct + '% (▼ ' + stats.diff + ')';
+            } else {
+                varTexto = 'estabilidade de 0.0% (0)';
+            }
+
+            const eventSuffix = currentEvent === 'ALL' ? '' : ' - ' + EVENT_LABELS[currentEvent];
+            titleEl.textContent = 'Resumo Executivo: ' + unitLabel + ' | No consolidado houve ' + varTexto + eventSuffix;
 
             // KPI 1 & 2: Ocorrências: 2026 e Ocorrências: 2025
             document.getElementById('kpi26Title').textContent = 'Ocorrências: 2026';
@@ -8660,6 +8670,50 @@
             }
         }
 
+        
+        // Plugin oficial de rótulos com a cor do ano (2026: #38bdf8 | 2025: #94a3b8)
+        const chartValueLabelsPlugin = {
+            id: 'chartValueLabels',
+            afterDatasetsDraw(chart) {
+                const { ctx } = chart;
+                chart.data.datasets.forEach((dataset, datasetIndex) => {
+                    const meta = chart.getDatasetMeta(datasetIndex);
+                    if (!meta || meta.hidden) return;
+
+                    const is2026 = dataset.label === '2026';
+                    const textColor = is2026 ? '#38bdf8' : '#94a3b8';
+
+                    meta.data.forEach((element, index) => {
+                        const val = dataset.data[index];
+                        if (val === undefined || val === null || val === 0) return;
+
+                        ctx.save();
+                        ctx.font = '700 11px "Inter", -apple-system, sans-serif';
+                        ctx.fillStyle = textColor;
+
+                        if (chart.options.indexAxis === 'y') {
+                            // Barra horizontal (Demonstrativo de Eventos)
+                            ctx.textAlign = 'left';
+                            ctx.textBaseline = 'middle';
+                            ctx.fillText(val, element.x + 6, element.y);
+                        } else if (chart.config.type === 'line') {
+                            // Linha (Comparativo Mensal)
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            const yOffset = is2026 ? -11 : 13;
+                            ctx.fillText(val, element.x, element.y + yOffset);
+                        } else {
+                            // Barra vertical (Comparativo Absoluto / Unidades ou Mês Único)
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'bottom';
+                            ctx.fillText(val, element.x, element.y - 4);
+                        }
+                        ctx.restore();
+                    });
+                });
+            }
+        };
+
         function renderCategoryChart() {
             const ctx = document.getElementById('categoryBarChart').getContext('2d');
             let events = getEventsBreakdown(currentUnit);
@@ -8679,6 +8733,7 @@
 
             categoryChartInst = new Chart(ctx, {
                 type: 'bar',
+                plugins: [chartValueLabelsPlugin],
                 data: {
                     labels,
                     datasets: [
@@ -8716,6 +8771,7 @@
                     scales: {
                         x: {
                             beginAtZero: true,
+                            grace: '15%',
                             grid: { color: 'rgba(255, 255, 255, 0.05)' },
                             ticks: { color: '#94a3b8', precision: 0 }
                         },
@@ -8754,6 +8810,7 @@
 
             trendChartInst = new Chart(ctx, {
                 type: isSingleMonth ? 'bar' : 'line',
+                plugins: [chartValueLabelsPlugin],
                 data: {
                     labels: months,
                     datasets: [
@@ -8812,6 +8869,7 @@
                         },
                         y: {
                             beginAtZero: true,
+                            grace: '18%',
                             grid: { color: 'rgba(255, 255, 255, 0.05)' },
                             ticks: { color: '#94a3b8', precision: 0 }
                         }
@@ -8920,18 +8978,22 @@
             const data26 = unitData.map(d => d.v26);
             const data25 = unitData.map(d => d.v25_ytd);
 
-            const evTitle = currentEvent === 'ALL' ? 'Todos os Eventos de Segurança' : EVENT_LABELS[currentEvent];
+            let unitFilterText = currentUnit !== 'ALL' ? ' - ' + currentUnit : '';
+            let eventFilterText = currentEvent !== 'ALL' ? ' - ' + EVENT_LABELS[currentEvent] : '';
+
+            // Títulos dinâmicos (não exibem "Todos os Eventos de Segurança" quando for ALL)
             document.getElementById('benchmarkChartTitle').textContent =
-                'Comparativo por Unidade - ' + evTitle;
+                'Comparativo Absoluto' + unitFilterText + eventFilterText + ' (2025 - 2026)';
             const tblTitleEl = document.getElementById('unitsTableTitle');
             if (tblTitleEl) {
-                tblTitleEl.textContent = 'Comparativo por Unidade - ' + evTitle;
+                tblTitleEl.textContent = 'Quadro Comparativo por Unidade' + unitFilterText + eventFilterText + ' (2025 - 2026)';
             }
 
             if (benchmarkChartInst) benchmarkChartInst.destroy();
 
             benchmarkChartInst = new Chart(ctx, {
                 type: 'bar',
+                plugins: [chartValueLabelsPlugin],
                 data: {
                     labels,
                     datasets: [
@@ -8972,6 +9034,7 @@
                         },
                         y: {
                             beginAtZero: true,
+                            grace: '15%',
                             grid: { color: 'rgba(255, 255, 255, 0.05)' },
                             ticks: { color: '#94a3b8', precision: 0 }
                         }
