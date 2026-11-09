@@ -410,7 +410,7 @@
 
         .grid-2col {
             display: grid;
-            grid-template-columns: 0.85fr 1.3fr;
+            grid-template-columns: 1fr 1fr;
             gap: 16px;
         }
 
@@ -857,10 +857,33 @@
                 font-size: 9pt !important;
             }
 
-            /* Redimensionamento dos gráficos para impressão rápida sem quebra */
+            /* Seção 1 na Impressão: Gráficos e Tabela com 100% de largura (igual ao Comparativo Absoluto) */
+            .grid-2col {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .grid-2col > div {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .grid-2col .panel-card {
+                width: 100% !important;
+                margin-bottom: 12px !important;
+            }
+
+            /* Redimensionamento equilibrado dos gráficos para impressão fluida e bem dimensionada */
             .chart-container {
-                max-height: 190px !important;
-                min-height: 170px !important;
+                width: 100% !important;
+                height: 250px !important;
+                max-height: 270px !important;
+                min-height: 230px !important;
+            }
+
+            .chart-container canvas {
+                width: 100% !important;
+                height: 100% !important;
             }
 
             /* Tabelas sem corte: layout fluido e quebra de texto */
@@ -1001,7 +1024,7 @@
                 </div>
 
                 <button class="btn btn-outline" onclick="resetFilters()">Limpar Filtros</button>
-                <button class="btn btn-primary" onclick="window.print()">Imprimir Relatório</button>
+                <button class="btn btn-primary" onclick="printReport()">Imprimir Relatório</button>
             </div>
         </div>
     </header>
@@ -1087,7 +1110,7 @@
                         <div class="panel-card">
                             <div class="panel-header">
                                 <div>
-                                    <div class="panel-title" id="chartCatTitle">Demostrativo de Eventos de Segurança (2025 - 2026)</div>
+                                    <div class="panel-title" id="chartCatTitle">Demonstrativo de Eventos de Segurança (2025 - 2026)</div>
                                 </div>
                             </div>
                             <div class="chart-container" style="min-height: 250px;">
@@ -8564,7 +8587,33 @@
         let categoryChartInst = null;
         let benchmarkChartInst = null;
 
-        // Plugin oficial de rótulos com a cor do ano (2026: #38bdf8 | 2025: #94a3b8)
+        // Controle de modo de impressão para renderização com alto contraste P&B (textos pretos)
+        var isPrinting = false;
+
+        function setPrintMode(active) {
+            if (isPrinting === active) return;
+            isPrinting = active;
+            if (typeof renderCategoryChart === 'function') renderCategoryChart();
+            if (typeof renderTrendChart === 'function') renderTrendChart();
+            if (typeof renderBenchmarkChart === 'function') renderBenchmarkChart();
+        }
+
+        window.addEventListener('beforeprint', function() {
+            setPrintMode(true);
+        });
+
+        window.addEventListener('afterprint', function() {
+            setPrintMode(false);
+        });
+
+        function printReport() {
+            setPrintMode(true);
+            setTimeout(function() {
+                window.print();
+            }, 150);
+        }
+
+        // Plugin oficial de rótulos com a cor do ano (2026: #38bdf8 | 2025: #94a3b8 / P&B impressão)
         var chartValueLabelsPlugin = {
             id: 'chartValueLabels',
             afterDatasetsDraw: function(chart) {
@@ -8574,7 +8623,12 @@
                     if (!meta || meta.hidden) return;
 
                     var is2026 = dataset.label === '2026';
-                    var textColor = is2026 ? '#38bdf8' : '#94a3b8';
+                    var textColor;
+                    if (isPrinting) {
+                        textColor = is2026 ? '#0369a1' : '#1e293b';
+                    } else {
+                        textColor = is2026 ? '#38bdf8' : '#94a3b8';
+                    }
 
                     meta.data.forEach(function(element, index) {
                         var val = dataset.data[index];
