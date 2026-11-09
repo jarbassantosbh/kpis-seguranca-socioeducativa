@@ -91,16 +91,16 @@ Disponibilizar uma versão com ergonomia **Mobile-First / PWA (Progressive Web A
 
 ```
 ┌────────────────────────────────────────────────────────┐
-│  📱 Camada de Apresentação PWA (Mobile & Desktop)     │
+│  📱 Camada de Apresentação PWA (Mobile & Desktop)      │
 ├────────────────────────────────────────────────────────┤
 │  • manifest.json dinâmico (Data URI base64)            │
 │  • display: standalone (tela cheia sem barra URL)      │
-│  • theme-color: #0b1120                                │
+│  • theme-color: #0b1120                              │
 │  • apple-mobile-web-app-capable: yes                   │
 │  • viewport-fit=cover (suporte a Dynamic Island/Notch) │
 ├────────────────────────────────────────────────────────┤
-│  📐 Layout Responsivo (@media max-width: 768px)        │
-│  • Header com empilhamento compacto de filtros        │
+│  📐 Layout Responsivo (@media max-width: 768px)        
+│  • Header com empilhamento compacto de filtros         │
 │  • KPI Grid: 2 colunas no mobile (leitura imediata)    │
 │  • Tabelas com scroll horizontal contido no card       │
 │  • Coluna 1 da Matriz congelada (position: sticky)     │
