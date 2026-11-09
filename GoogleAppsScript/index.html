@@ -237,24 +237,49 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--accent-blue);
-            border-radius: 8px;
-            padding: 14px 18px;
+            border-radius: 6px;
+            padding: 10px 18px;
             margin-bottom: 18px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
         }
 
         .context-info h2 {
-            font-size: 1.15rem;
-            font-weight: 800;
+            font-size: 0.95rem;
+            font-weight: 500;
             color: #fff;
             display: flex;
             align-items: center;
-            gap: 10px;
             flex-wrap: wrap;
+            gap: 6px;
+            margin: 0;
+            line-height: 1.35;
+        }
+
+        .context-label {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .context-unit {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .context-sep {
+            color: #475569;
+            margin: 0 4px;
+            font-size: 0.85rem;
+        }
+
+        .context-desc {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 500;
         }
 
         .context-meta {
@@ -807,11 +832,15 @@
 
         <div id="tabComparativo" class="tab-pane active">
 
-            <!-- CONTEXT BANNER -->
+            <!-- CONTEXT BANNER (LIMPO E SIMPLIFICADO) -->
             <div class="context-banner">
                 <div class="context-info">
-                    <h2>
-                        <span id="currentContextTitle">Resumo Executivo: Unidades Socioeducativas | No consolidado houve aumento de 0% (0)</span>
+                    <h2 id="currentContextTitle">
+                        <span class="context-label">Resumo Executivo:</span>
+                        <span class="context-unit">Unidades Socioeducativas</span>
+                        <span class="context-sep">•</span>
+                        <span class="context-desc">No consolidado houve</span>
+                        <span class="context-badge badge-danger">aumento de 0% (0)</span>
                     </h2>
                 </div>
             </div>
@@ -853,6 +882,7 @@
                 <div class="section-header">
                     <div>
                         <div class="section-title">1. Evento de Segurança</div>
+                        <div class="section-subtitle" id="sec1StatsSubtitle">Média mensal: 0.0 ocorrências • Mediana: 0.0 ocorrências (2026)</div>
                     </div>
                 </div>
 
@@ -8594,6 +8624,27 @@
             renderMatrixTable();
         }
 
+        
+        function updateSection1Stats() {
+            const months = getActiveMonths();
+            let r26 = RAW_DATA.data2026;
+            if (currentUnit !== 'ALL') r26 = r26.filter(r => r.unidade === currentUnit);
+
+            const monthly26 = months.map(m => r26.filter(r => r.mes === m).reduce((acc, r) => acc + getRowValue(r), 0));
+            const sum26 = monthly26.reduce((a, b) => a + b, 0);
+            const nMonths = Math.max(1, months.length);
+            const avg26 = (sum26 / nMonths).toFixed(1);
+
+            const sorted = monthly26.slice().sort((a, b) => a - b);
+            const mid = Math.floor(sorted.length / 2);
+            const med26 = (sorted.length % 2 !== 0 ? sorted[mid] : ((sorted[mid - 1] + sorted[mid]) / 2)).toFixed(1);
+
+            const subEl = document.getElementById('sec1StatsSubtitle');
+            if (subEl) {
+                subEl.innerHTML = 'Média mensal: <strong style="color:#fff;">' + avg26 + '</strong> ocorrências • Mediana: <strong style="color:#fff;">' + med26 + '</strong> ocorrências (2026)';
+            }
+        }
+
         function updateContextAndKPIs() {
             const titleEl = document.getElementById('currentContextTitle');
 
@@ -8604,17 +8655,27 @@
 
             // Formato solicitado: Todos os Eventos de Segurança | +65.9% (+166) - Unidades Socioeducativas
                         // Resumo Executivo: [UNIDADE] | No consolidado houve aumento de [TOTAL CONSOLIDADO DE VAR.(%) - DIR(^)] - [EVENTO]
-            let varTexto = '';
+            let badgeHtml = '';
             if (stats.diff > 0) {
-                varTexto = 'aumento de +' + stats.pct + '% (▲ +' + stats.diff + ')';
+                badgeHtml = '<span class="context-badge badge-danger">aumento de +' + stats.pct + '% (▲ ' + stats.diff + ')</span>';
             } else if (stats.diff < 0) {
-                varTexto = 'redução de ' + stats.pct + '% (▼ ' + stats.diff + ')';
+                badgeHtml = '<span class="context-badge badge-success">redução de ' + stats.pct + '% (▼ ' + stats.diff + ')</span>';
             } else {
-                varTexto = 'estabilidade de 0.0% (0)';
+                badgeHtml = '<span class="context-badge badge-info">estabilidade (0%)</span>';
             }
 
-            const eventSuffix = currentEvent === 'ALL' ? '' : ' - ' + EVENT_LABELS[currentEvent];
-            titleEl.textContent = 'Resumo Executivo: ' + unitLabel + ' | No consolidado houve ' + varTexto + eventSuffix;
+            const eventBadge = currentEvent === 'ALL' ? '' : '<span class="context-badge badge-info" style="margin-left: 4px;">' + EVENT_LABELS[currentEvent] + '</span>';
+
+            titleEl.innerHTML =
+                '<span class="context-label">Resumo Executivo:</span> ' +
+                '<span class="context-unit">' + unitLabel + '</span> ' +
+                '<span class="context-sep">•</span> ' +
+                '<span class="context-desc">No consolidado houve</span> ' +
+                badgeHtml +
+                eventBadge;
+
+            // Estatísticas da Seção 1 (Média e Mediana Mensal 2026)
+            updateSection1Stats();
 
             // KPI 1 & 2: Ocorrências: 2026 e Ocorrências: 2025
             document.getElementById('kpi26Title').textContent = 'Ocorrências: 2026';
