@@ -1,8 +1,8 @@
 # 🛡️ Guia Mestre do Agente & Documentação Unificada do Sistema
 ## Dashboard Executivo de Eventos de Segurança Socioeducativa (2025 vs 2026)
 **Instituto Elo - Subsecretaria de Atendimento Socioeducativo**  
-**Versão Vigente:** `2.3.0` (Deploy Oficial de Produção)  
-**Data da Criação / Atualização:** 09 de Novembro de 2026  
+**Versão Vigente:** `2.5.2` (Deploy Oficial de Produção Homologado)  
+**Data da Criação / Atualização:** 10 de Novembro de 2026  
 **Status do Sistema:** 🟢 **OPERACIONAL & HOMOLOGADO EM PRODUÇÃO**
 
 ---
@@ -152,6 +152,7 @@ git push origin main --tags
 
 | Versão | Deployment | Data | Descrição / Entregas da Release |
 | :--- | :--- | :--- | :--- |
-| **`2.3.0`** | `@exec` | 09/11/2026 | **Identidade Visual, Nomenclatura Completa CEIP/CSE, Filtros e Ergonomia Sem Rolagem:**<br>• Inclusão da Logo Marca oficial do Instituto Elo (branca) no cabeçalho.<br>• Atualização do subtítulo: *"Estudo: Eventos de Segurança Janeiro a Outubro (2025 - 2026)"*.<br>• Nomes completos oficiais padronizados para as 13 unidades (`CEIP Araxá`, `CEIP Contagem`, etc.).<br>• Filtro de Período limpo (`Acumulado (10 meses)` e lista de meses direta).<br>• Quadro Comparativo ajustado: títulos *Eventos de Segurança*, *2025*, *2026* e *Maior Volume 2026 - Unidade*.<br>• Seção 3 Comparativa com nomes completos de todas as 10 tipologias de eventos e legenda simplificada (`2025`, `2026`, `Aumento`, `Redução`).<br>• Otimização visual para eliminação total de barra de rolagem horizontal em desktop. |
+| **`2.5.2`** | `@exec` | 10/11/2026 | **Relatório Gerencial Executivo Homologado (A4 Retrato), Alta Resolução e Ajustes Finos:**<br>• Formatação de impressão profissional em A4 Retrato (vertical) com estrutura de 4 páginas limpas e sem quebras de linhas no meio de tabelas.<br>• Resolução de gráficos elevada com `devicePixelRatio: 2.5` (250-300 DPI) e eliminação de distorções/alongamentos visuais.<br>• Rótulos de eixos, descrições de eventos e legendas renderizados em preto negrito de alto contraste para impressão física.<br>• Tabelas com larguras percentuais fixas evitando corte de colunas no formato retrato.<br>• Cabeçalho exclusivo de impressão com Logo do Instituto Elo, títulos institucionais, data/hora e filtros ativos, estritamente oculto na navegação de tela web.<br>• Responsividade mobile aprimorada e alinhamento de KPIs executivos. |
+| **`2.3.0`** | `@3` | 09/11/2026 | **Identidade Visual, Nomenclatura Completa CEIP/CSE, Filtros e Ergonomia Sem Rolagem:**<br>• Inclusão da Logo Marca oficial do Instituto Elo (branca) no cabeçalho.<br>• Atualização do subtítulo: *"Estudo: Eventos de Segurança Janeiro a Outubro (2025 - 2026)"*.<br>• Nomes completos oficiais padronizados para as 13 unidades (`CEIP Araxá`, `CEIP Contagem`, etc.).<br>• Filtro de Período limpo (`Acumulado (10 meses)` e lista de meses direta).<br>• Quadro Comparativo ajustado: títulos *Eventos de Segurança*, *2025*, *2026* e *Maior Volume 2026 - Unidade*.<br>• Seção 3 Comparativa com nomes completos de todas as 10 tipologias de eventos e legenda simplificada (`2025`, `2026`, `Aumento`, `Redução`).<br>• Otimização visual para eliminação total de barra de rolagem horizontal em desktop. |
 | **`2.2.0`** | `@2` | 07/11/2026 | **Painel Executivo de Eventos de Segurança - Filtro Global & Lista Patronizada:**<br>• Filtros globais sincronizados no topo (Unidade, Evento, Período).<br>• Tabela cruzada interativa (Matriz Unidade x Evento com modos Comparativo, 2026, 2025 e Saldo).<br>• Modos *Lista Patronizada* (homóloga) vs *Base Completa*.<br>• Integração dos dois modelos oficiais Power BI (2025 e 2026) em abas nativas. |
 | **`2.0.0`** | Baseline | 06/11/2026 | **Estruturação Inicial e Governança:**<br>• Criação do Guia Mestre `AGENTS.md` e Design System `DESIGN.md`.<br>• Saneamento e extração limpa UTF-8 do dataset (`dados_seguranca.json`).<br>• Configuração de ferramentas: ESLint, Clasp, Git e backup em 3 níveis. |
