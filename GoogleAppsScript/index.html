@@ -8775,7 +8775,54 @@
             setTimeout(function() {
                 window.print();
             }, 250);
+        }
+
+        // Plugin oficial de rótulos com a cor do ano (2026: #38bdf8 | 2025: #94a3b8 / P&B impressão)
+        var chartValueLabelsPlugin = {
+            id: 'chartValueLabels',
+            afterDatasetsDraw: function(chart) {
+                var ctx = chart.ctx;
+                chart.data.datasets.forEach(function(dataset, datasetIndex) {
+                    var meta = chart.getDatasetMeta(datasetIndex);
+                    if (!meta || meta.hidden) return;
+
+                    var is2026 = dataset.label === '2026';
+                    var textColor;
+                    if (isPrinting) {
+                        textColor = is2026 ? '#0284c7' : '#1e293b';
+                    } else {
+                        textColor = is2026 ? '#38bdf8' : '#94a3b8';
+                    }
+
+                    meta.data.forEach(function(element, index) {
+                        var val = dataset.data[index];
+                        if (val === undefined || val === null || val === 0) return;
+
+                        ctx.save();
+                        ctx.font = '700 11px "Inter", -apple-system, sans-serif';
+                        ctx.fillStyle = textColor;
+
+                        if (chart.options.indexAxis === 'y') {
+                            ctx.textAlign = 'left';
+                            ctx.textBaseline = 'middle';
+                            ctx.fillText(val, element.x + 6, element.y);
+                        } else if (chart.config.type === 'line') {
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'middle';
+                            var yOffset = is2026 ? -11 : 13;
+                            ctx.fillText(val, element.x, element.y + yOffset);
+                        } else {
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'bottom';
+                            ctx.fillText(val, element.x, element.y - 4);
+                        }
+                        ctx.restore();
+                    });
+                });
+            }
         };
+
+
 
 
         window.addEventListener('DOMContentLoaded', () => {
