@@ -1082,68 +1082,144 @@
                 line-height: 1.1 !important;
             }
 
-            /* Tabela de Eventos (7 colunas): 100% de largura */
+            /* Tabela de Eventos: Centralizada, compacta e alinhada */
             #eventsBreakdownTable {
                 table-layout: fixed !important;
                 width: 100% !important;
+                border-collapse: collapse !important;
             }
 
-            #eventsBreakdownTable th:nth-child(1), #eventsBreakdownTable td:nth-child(1) { width: 28% !important; text-align: left !important; font-weight: 600 !important; }
-            #eventsBreakdownTable th:nth-child(2), #eventsBreakdownTable td:nth-child(2) { width: 8% !important; text-align: right !important; }
-            #eventsBreakdownTable th:nth-child(3), #eventsBreakdownTable td:nth-child(3) { width: 8% !important; text-align: right !important; }
-            #eventsBreakdownTable th:nth-child(4), #eventsBreakdownTable td:nth-child(4) { width: 8% !important; text-align: right !important; }
-            #eventsBreakdownTable th:nth-child(5), #eventsBreakdownTable td:nth-child(5) { width: 10% !important; text-align: right !important; }
-            #eventsBreakdownTable th:nth-child(6), #eventsBreakdownTable td:nth-child(6) { width: 10% !important; text-align: right !important; }
-            #eventsBreakdownTable th:nth-child(7), #eventsBreakdownTable td:nth-child(7) { width: 28% !important; text-align: left !important; font-size: 6.5pt !important; }
+            #eventsBreakdownTable thead th {
+                font-size: 5.5pt !important;
+                font-weight: 700 !important;
+                padding: 2px 1px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+                line-height: 1.1 !important;
+            }
 
-            /* Quadro Comparativo por Unidade (9 colunas calibradas em % - NUNCA CORTA) */
+            #eventsBreakdownTable tbody td {
+                font-size: 5.5pt !important;
+                padding: 2px 1px !important;
+                vertical-align: middle !important;
+                line-height: 1.1 !important;
+            }
+
+            #eventsBreakdownTable tfoot td {
+                font-size: 5.8pt !important;
+                font-weight: 800 !important;
+                padding: 2px 1px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+            }
+
+            #eventsBreakdownTable th:nth-child(1), #eventsBreakdownTable td:nth-child(1) { width: 28% !important; text-align: left !important; font-weight: 700 !important; padding-left: 3px !important; }
+            #eventsBreakdownTable th:nth-child(2), #eventsBreakdownTable td:nth-child(2) { width: 8% !important; text-align: center !important; }
+            #eventsBreakdownTable th:nth-child(3), #eventsBreakdownTable td:nth-child(3) { width: 8% !important; text-align: center !important; font-weight: 700 !important; }
+            #eventsBreakdownTable th:nth-child(4), #eventsBreakdownTable td:nth-child(4) { width: 8% !important; text-align: center !important; font-weight: 700 !important; }
+            #eventsBreakdownTable th:nth-child(5), #eventsBreakdownTable td:nth-child(5) { width: 10% !important; text-align: center !important; font-weight: 700 !important; }
+            #eventsBreakdownTable th:nth-child(6), #eventsBreakdownTable td:nth-child(6) { width: 10% !important; text-align: center !important; }
+            #eventsBreakdownTable th:nth-child(7), #eventsBreakdownTable td:nth-child(7) { width: 28% !important; text-align: left !important; font-size: 5.3pt !important; padding-left: 3px !important; }
+
+            /* Quadro Comparativo por Unidade: Centralizado, títulos calibrados e fontes compactas */
             #unitsSummaryTable {
                 table-layout: fixed !important;
                 width: 100% !important;
+                border-collapse: collapse !important;
             }
 
-            #unitsSummaryTable th:nth-child(1), #unitsSummaryTable td:nth-child(1) { width: 17% !important; text-align: left !important; font-weight: 700 !important; }
-            #unitsSummaryTable th:nth-child(2), #unitsSummaryTable td:nth-child(2) { width: 5.5% !important; text-align: right !important; }
-            #unitsSummaryTable th:nth-child(3), #unitsSummaryTable td:nth-child(3) { width: 20% !important; text-align: left !important; font-size: 6.2pt !important; }
-            #unitsSummaryTable th:nth-child(4), #unitsSummaryTable td:nth-child(4) { width: 5.5% !important; text-align: right !important; font-weight: 700 !important; }
-            #unitsSummaryTable th:nth-child(5), #unitsSummaryTable td:nth-child(5) { width: 20% !important; text-align: left !important; font-size: 6.2pt !important; }
-            #unitsSummaryTable th:nth-child(6), #unitsSummaryTable td:nth-child(6) { width: 6.5% !important; text-align: right !important; }
-            #unitsSummaryTable th:nth-child(7), #unitsSummaryTable td:nth-child(7) { width: 6.5% !important; text-align: right !important; }
-            #unitsSummaryTable th:nth-child(8), #unitsSummaryTable td:nth-child(8) { width: 6% !important; text-align: right !important; }
+            #unitsSummaryTable thead th {
+                font-size: 5.3pt !important;
+                font-weight: 700 !important;
+                padding: 2px 1px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+                line-height: 1.1 !important;
+            }
+
+            #unitsSummaryTable tbody td {
+                font-size: 5.3pt !important;
+                padding: 2px 1px !important;
+                vertical-align: middle !important;
+                line-height: 1.1 !important;
+            }
+
+            #unitsSummaryTable tfoot td {
+                font-size: 5.5pt !important;
+                font-weight: 800 !important;
+                padding: 2px 1px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+            }
+
+            #unitsSummaryTable th:nth-child(1), #unitsSummaryTable td:nth-child(1) { width: 16% !important; text-align: left !important; font-weight: 700 !important; padding-left: 3px !important; }
+            #unitsSummaryTable th:nth-child(2), #unitsSummaryTable td:nth-child(2) { width: 5% !important; text-align: center !important; }
+            #unitsSummaryTable th:nth-child(3), #unitsSummaryTable td:nth-child(3) { width: 21% !important; text-align: left !important; font-size: 5.1pt !important; padding-left: 3px !important; }
+            #unitsSummaryTable th:nth-child(4), #unitsSummaryTable td:nth-child(4) { width: 5% !important; text-align: center !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(5), #unitsSummaryTable td:nth-child(5) { width: 21% !important; text-align: left !important; font-size: 5.1pt !important; padding-left: 3px !important; }
+            #unitsSummaryTable th:nth-child(6), #unitsSummaryTable td:nth-child(6) { width: 6% !important; text-align: center !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(7), #unitsSummaryTable td:nth-child(7) { width: 6% !important; text-align: center !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(8), #unitsSummaryTable td:nth-child(8) { width: 7% !important; text-align: center !important; white-space: nowrap !important; }
             #unitsSummaryTable th:nth-child(9), #unitsSummaryTable td:nth-child(9) { 
-                width: 13.5% !important; 
+                width: 13% !important; 
                 text-align: center !important; 
-                font-size: 6.2pt !important; 
                 white-space: nowrap !important; 
             }
 
             #unitsSummaryTable td:nth-child(9) .context-badge {
                 display: inline-block !important;
                 white-space: nowrap !important;
-                padding: 2px 4px !important;
-                font-size: 6.2pt !important;
+                padding: 1px 3px !important;
+                font-size: 5pt !important;
                 font-weight: 700 !important;
             }
 
-            /* Matriz de Eventos (13 unidades × 11 eventos) */
+            /* Matriz de Eventos: Centralizado, títulos calibrados e fontes compactas */
             .matrix-table {
                 table-layout: fixed !important;
                 width: 100% !important;
+                border-collapse: collapse !important;
             }
 
-            .matrix-table th, .matrix-table td {
-                background: transparent !important;
+            .matrix-table thead th {
+                background: #f1f5f9 !important;
                 color: #0f172a !important;
                 border: 1px solid #cbd5e1 !important;
-                font-size: 5.6pt !important;
-                padding: 3px 1px !important;
+                font-size: 4.8pt !important;
+                font-weight: 700 !important;
+                padding: 2px 1px !important;
                 text-align: center !important;
+                vertical-align: middle !important;
+                line-height: 1.1 !important;
+                word-wrap: break-word !important;
             }
 
             .matrix-table th:first-child, .matrix-table td:first-child {
                 text-align: left !important;
                 font-weight: 700 !important;
-                width: 14% !important;
+                width: 15% !important;
+                font-size: 5.2pt !important;
+                padding-left: 3px !important;
+            }
+
+            .matrix-table td {
+                background: transparent !important;
+                color: #0f172a !important;
+                border: 1px solid #e2e8f0 !important;
+                padding: 1px 0.5px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
+            }
+
+            .matrix-table tfoot td {
+                background: #f8fafc !important;
+                color: #0f172a !important;
+                font-weight: 800 !important;
+                font-size: 5.2pt !important;
+                border-top: 2px solid #0f172a !important;
+                padding: 2px 1px !important;
+                text-align: center !important;
+                vertical-align: middle !important;
             }
 
             .matrix-cell {
@@ -1155,7 +1231,20 @@
                 background: transparent !important;
             }
 
+            .m-box {
+                gap: 0px !important;
+                line-height: 1.0 !important;
+            }
+
+            .m-pair {
+                font-size: 4.8pt !important;
+                gap: 1.5px !important;
+                font-weight: 700 !important;
+                line-height: 1.0 !important;
+            }
+
             .m-v25, .m-v26, .m-arr {
+                font-size: 4.8pt !important;
                 color: #000000 !important;
             }
 
@@ -1163,6 +1252,11 @@
                 background: transparent !important;
                 color: #000000 !important;
                 border: 1px solid #94a3b8 !important;
+                font-size: 4.4pt !important;
+                padding: 0px 2.5px !important;
+                line-height: 1.0 !important;
+                font-weight: 700 !important;
+                border-radius: 2px !important;
             }
 
             .matrix-legend {
@@ -1358,7 +1452,7 @@
             </div>
 
             <!-- SEÇÃO 2: COMPARATIVO POR UNIDADE -->
-            <div class="section-block" id="sec2Block">
+            <div class="section-block print-page-break" id="sec2Block">
                 <div class="section-header">
                     <div>
                         <div class="section-title" id="sec2Title">2. Comparativo por Unidade</div>
@@ -1381,7 +1475,7 @@
                     </div>
                 </div>
 
-                <div class="panel-card print-page-break" id="unitsTableCard">
+                <div class="panel-card" id="unitsTableCard">
                     <div class="panel-header">
                         <div>
                             <div class="panel-title" id="unitsTableTitle">Quadro Comparativo por Unidade (2025 - 2026)</div>
@@ -8756,16 +8850,16 @@
 
         const EVENT_SHORT_LABELS = {
             'fuga': 'Fuga',
-            'agressao_adolescente': 'Agressão contra adolescentes',
-            'agressao_funcionario': 'Agressão contra funcionários',
+            'agressao_adolescente': 'Agressão Adolesc.',
+            'agressao_funcionario': 'Agressão Funcion.',
             'motim': 'Motim',
             'tumulto': 'Tumulto',
             'rebeliao': 'Rebelião',
-            'drogas': 'Apreensão de drogas na Unidade',
-            'armas': 'Apreensão de armas brancas na Unidade',
-            'celular': 'Apreensão de celular na Unidade',
+            'drogas': 'Apreensão Drogas',
+            'armas': 'Apreensão Armas',
+            'celular': 'Apreensão Celular',
             'evasao': 'Evasão',
-            'tentativa_autoexterminio': 'Tentativa de autoextermínio'
+            'tentativa_autoexterminio': 'Tent. Autoexterm.'
         };
 
         const ALL_EVENT_KEYS = [
