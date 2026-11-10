@@ -738,6 +738,16 @@
 
         
         
+        /* Cabeçalho exclusivo de impressão (estritamente oculto em tela) */
+        .print-report-header {
+            display: none !important;
+        }
+        .print-logo {
+            display: none;
+            max-height: 40px;
+            width: auto;
+        }
+
         /* OTIMIZAÇÃO ATÔMICA PARA IMPRESSÃO (A4 PAISAGEM PRETO E BRANCO) */
         @media print {
             @page {
