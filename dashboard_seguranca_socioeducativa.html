@@ -754,17 +754,24 @@
             width: auto;
         }
 
+        /* Modo de preparação para impressão (garante que Chart.js dimensione para A4) */
+        body.is-printing-report #tabComparativo {
+            max-width: 740px !important;
+            width: 740px !important;
+            margin: 0 auto !important;
+        }
+
         /* OTIMIZAÇÃO ATÔMICA PARA IMPRESSÃO (A4 PAISAGEM PRETO E BRANCO) */
         @media print {
             @page {
                 size: portrait;
-                margin: 12mm 10mm 12mm 10mm;
+                margin: 8mm 8mm 8mm 8mm;
             }
 
             body {
                 background: #ffffff !important;
                 color: #000000 !important;
-                font-size: 8.5pt !important;
+                font-size: 8pt !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
@@ -913,11 +920,11 @@
 
             /* Seções e Títulos */
             .section-block {
-                margin-bottom: 14px !important;
+                margin-bottom: 6px !important;
             }
 
             .section-header {
-                margin-bottom: 8px !important;
+                margin-bottom: 4px !important;
             }
 
             .section-title {
@@ -938,8 +945,8 @@
                 border: 1px solid #cbd5e1 !important;
                 background: #ffffff !important;
                 box-shadow: none !important;
-                padding: 8px 10px !important;
-                margin-bottom: 12px !important;
+                padding: 4px 6px !important;
+                margin-bottom: 6px !important;
                 border-radius: 4px !important;
                 break-inside: avoid !important;
                 page-break-inside: avoid !important;
@@ -968,7 +975,7 @@
 
             .grid-2col .panel-card {
                 width: 100% !important;
-                margin-bottom: 12px !important;
+                margin-bottom: 6px !important;
             }
 
             /* Quebras de Página Estratégicas para Relatório de 4 Páginas Perfeito */
@@ -987,29 +994,40 @@
 
             .panel-card:has(#categoryBarChart) .chart-container,
             #categoryChartContainer {
-                height: 220px !important;
-                min-height: 220px !important;
-                max-height: 220px !important;
+                height: 145px !important;
+                min-height: 145px !important;
+                max-height: 145px !important;
             }
 
             .panel-card:has(#monthlyTrendChart) .chart-container,
             #trendChartContainer {
-                height: 190px !important;
-                min-height: 190px !important;
-                max-height: 190px !important;
+                height: 125px !important;
+                min-height: 125px !important;
+                max-height: 125px !important;
             }
 
             .panel-card:has(#benchmarkChart) .chart-container,
             #benchmarkChartContainer {
-                height: 230px !important;
-                min-height: 230px !important;
-                max-height: 230px !important;
+                height: 165px !important;
+                min-height: 165px !important;
+                max-height: 165px !important;
             }
 
             /* Fallback para navegadores sem :has */
             .chart-container {
-                min-height: 190px !important;
-                max-height: 230px !important;
+                min-height: 125px !important;
+                max-height: 165px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow: hidden !important;
+                box-sizing: border-box !important;
+            }
+
+            .chart-container canvas,
+            canvas {
+                max-width: 100% !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
             }
 
             /* Tabelas sem corte: layout fixo e larguras 100% calibradas para A4 Retrato */
@@ -1029,12 +1047,12 @@
             .dashboard-table thead th {
                 background: #f1f5f9 !important;
                 color: #0f172a !important;
-                font-size: 7.2pt !important;
+                font-size: 6.5pt !important;
                 font-weight: 700 !important;
-                padding: 4px 3px !important;
+                padding: 2.5px 2px !important;
                 border: 1px solid #cbd5e1 !important;
                 white-space: normal !important;
-                line-height: 1.15 !important;
+                line-height: 1.1 !important;
             }
 
             .dashboard-table tbody tr {
@@ -1045,21 +1063,23 @@
 
             .dashboard-table td {
                 color: #0f172a !important;
-                font-size: 7pt !important;
-                padding: 4px 3px !important;
+                font-size: 6.5pt !important;
+                padding: 2.5px 2px !important;
                 border: 1px solid #e2e8f0 !important;
                 white-space: normal !important;
                 word-wrap: break-word !important;
-                line-height: 1.15 !important;
+                line-height: 1.1 !important;
             }
 
             .dashboard-table tfoot td {
                 background: #f8fafc !important;
                 color: #0f172a !important;
-                font-size: 7.5pt !important;
+                font-size: 6.5pt !important;
                 font-weight: 800 !important;
                 border-top: 2px solid #0f172a !important;
                 border-bottom: 1px solid #cbd5e1 !important;
+                padding: 2.5px 2px !important;
+                line-height: 1.1 !important;
             }
 
             /* Tabela de Eventos (7 colunas): 100% de largura */
@@ -1338,7 +1358,7 @@
             </div>
 
             <!-- SEÇÃO 2: COMPARATIVO POR UNIDADE -->
-            <div class="section-block print-page-break" id="sec2Block">
+            <div class="section-block" id="sec2Block">
                 <div class="section-header">
                     <div>
                         <div class="section-title" id="sec2Title">2. Comparativo por Unidade</div>
@@ -1361,7 +1381,7 @@
                     </div>
                 </div>
 
-                <div class="panel-card" id="unitsTableCard">
+                <div class="panel-card print-page-break" id="unitsTableCard">
                     <div class="panel-header">
                         <div>
                             <div class="panel-title" id="unitsTableTitle">Quadro Comparativo por Unidade (2025 - 2026)</div>
@@ -1390,7 +1410,7 @@
             </div>
 
             <!-- SEÇÃO 3: COMPARATIVO POR EVENTO DE SEGURANÇA -->
-            <div class="section-block print-page-break" id="sec3Block">
+            <div class="section-block" id="sec3Block">
                 <div class="section-header">
                     <div>
                         <div class="section-title">3. Comparativo por Evento de Segurança (2025 - 2026)</div>
@@ -8788,7 +8808,12 @@
         function setPrintMode(active) {
             if (isPrinting === active) return;
             isPrinting = active;
-            if (active) updatePrintMeta();
+            if (active) {
+                document.body.classList.add('is-printing-report');
+                updatePrintMeta();
+            } else {
+                document.body.classList.remove('is-printing-report');
+            }
             if (typeof renderCategoryChart === 'function') renderCategoryChart();
             if (typeof renderTrendChart === 'function') renderTrendChart();
             if (typeof renderBenchmarkChart === 'function') renderBenchmarkChart();
@@ -8831,7 +8856,7 @@
                         if (val === undefined || val === null || val === 0) return;
 
                         ctx.save();
-                        ctx.font = isPrinting ? '700 9.5px "Inter", -apple-system, sans-serif' : '700 11px "Inter", -apple-system, sans-serif';
+                        ctx.font = isPrinting ? '700 8.5px "Inter", -apple-system, sans-serif' : '700 11px "Inter", -apple-system, sans-serif';
                         ctx.fillStyle = textColor;
 
                         if (chart.options.indexAxis === 'y') {
@@ -9556,13 +9581,17 @@
                             label: '2026',
                             data: data26,
                             backgroundColor: '#38bdf8',
-                            borderRadius: 4
+                            borderRadius: 3,
+                            barThickness: isPrinting ? 9 : undefined,
+                            maxBarThickness: isPrinting ? 11 : 28
                         },
                         {
                             label: '2025',
                             data: data25,
                             backgroundColor: '#64748b',
-                            borderRadius: 4
+                            borderRadius: 3,
+                            barThickness: isPrinting ? 9 : undefined,
+                            maxBarThickness: isPrinting ? 11 : 28
                         }
                     ]
                 },
@@ -9584,8 +9613,8 @@
                         legend: { 
                             labels: { 
                                 color: isPrinting ? '#000000' : '#cbd5e1', 
-                                boxWidth: 12, 
-                                font: { size: 10.5, weight: '700' } 
+                                boxWidth: 10, 
+                                font: { size: isPrinting ? 9 : 10.5, weight: '700' } 
                             } 
                         },
                         tooltip: { backgroundColor: '#182238', titleColor: '#fff', bodyColor: '#e2e8f0' }
@@ -9595,7 +9624,7 @@
                             grid: { display: false },
                             ticks: { 
                                 color: isPrinting ? '#000000' : '#e2e8f0', 
-                                font: { weight: '700', size: isPrinting ? 8 : 10 },
+                                font: { weight: '700', size: isPrinting ? 7 : 10 },
                                 autoSkip: false,
                                 maxRotation: isPrinting ? 45 : 30,
                                 minRotation: isPrinting ? 45 : 0
@@ -9608,7 +9637,7 @@
                             ticks: { 
                                 color: isPrinting ? '#000000' : '#94a3b8', 
                                 precision: 0,
-                                font: { size: 9, weight: isPrinting ? '700' : 'normal' }
+                                font: { size: isPrinting ? 8 : 9, weight: isPrinting ? '700' : 'normal' }
                             }
                         }
                     }
