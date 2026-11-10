@@ -979,27 +979,30 @@
                 box-sizing: border-box !important;
             }
 
-            .panel-card:has(#categoryBarChart) .chart-container {
+            .panel-card:has(#categoryBarChart) .chart-container,
+            #categoryChartContainer {
                 height: 220px !important;
                 min-height: 220px !important;
                 max-height: 220px !important;
             }
 
-            .panel-card:has(#monthlyTrendChart) .chart-container {
+            .panel-card:has(#monthlyTrendChart) .chart-container,
+            #trendChartContainer {
                 height: 190px !important;
                 min-height: 190px !important;
                 max-height: 190px !important;
             }
 
-            .panel-card:has(#benchmarkChart) .chart-container {
-                height: 220px !important;
-                min-height: 220px !important;
-                max-height: 220px !important;
+            .panel-card:has(#benchmarkChart) .chart-container,
+            #benchmarkChartContainer {
+                height: 230px !important;
+                min-height: 230px !important;
+                max-height: 230px !important;
             }
 
             /* Fallback para navegadores sem :has */
             .chart-container {
-                min-height: 200px !important;
+                min-height: 190px !important;
                 max-height: 230px !important;
             }
 
@@ -1073,15 +1076,28 @@
                 width: 100% !important;
             }
 
-            #unitsSummaryTable th:nth-child(1), #unitsSummaryTable td:nth-child(1) { width: 18% !important; text-align: left !important; font-weight: 700 !important; }
-            #unitsSummaryTable th:nth-child(2), #unitsSummaryTable td:nth-child(2) { width: 6% !important; text-align: right !important; }
-            #unitsSummaryTable th:nth-child(3), #unitsSummaryTable td:nth-child(3) { width: 22% !important; text-align: left !important; font-size: 6.3pt !important; }
-            #unitsSummaryTable th:nth-child(4), #unitsSummaryTable td:nth-child(4) { width: 6% !important; text-align: right !important; font-weight: 700 !important; }
-            #unitsSummaryTable th:nth-child(5), #unitsSummaryTable td:nth-child(5) { width: 22% !important; text-align: left !important; font-size: 6.3pt !important; }
-            #unitsSummaryTable th:nth-child(6), #unitsSummaryTable td:nth-child(6) { width: 7% !important; text-align: right !important; }
-            #unitsSummaryTable th:nth-child(7), #unitsSummaryTable td:nth-child(7) { width: 7% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(1), #unitsSummaryTable td:nth-child(1) { width: 17% !important; text-align: left !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(2), #unitsSummaryTable td:nth-child(2) { width: 5.5% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(3), #unitsSummaryTable td:nth-child(3) { width: 20% !important; text-align: left !important; font-size: 6.2pt !important; }
+            #unitsSummaryTable th:nth-child(4), #unitsSummaryTable td:nth-child(4) { width: 5.5% !important; text-align: right !important; font-weight: 700 !important; }
+            #unitsSummaryTable th:nth-child(5), #unitsSummaryTable td:nth-child(5) { width: 20% !important; text-align: left !important; font-size: 6.2pt !important; }
+            #unitsSummaryTable th:nth-child(6), #unitsSummaryTable td:nth-child(6) { width: 6.5% !important; text-align: right !important; }
+            #unitsSummaryTable th:nth-child(7), #unitsSummaryTable td:nth-child(7) { width: 6.5% !important; text-align: right !important; }
             #unitsSummaryTable th:nth-child(8), #unitsSummaryTable td:nth-child(8) { width: 6% !important; text-align: right !important; }
-            #unitsSummaryTable th:nth-child(9), #unitsSummaryTable td:nth-child(9) { width: 6% !important; text-align: center !important; font-size: 6pt !important; }
+            #unitsSummaryTable th:nth-child(9), #unitsSummaryTable td:nth-child(9) { 
+                width: 13.5% !important; 
+                text-align: center !important; 
+                font-size: 6.2pt !important; 
+                white-space: nowrap !important; 
+            }
+
+            #unitsSummaryTable td:nth-child(9) .context-badge {
+                display: inline-block !important;
+                white-space: nowrap !important;
+                padding: 2px 4px !important;
+                font-size: 6.2pt !important;
+                font-weight: 700 !important;
+            }
 
             /* Matriz de Eventos (13 unidades × 11 eventos) */
             .matrix-table {
@@ -1282,13 +1298,13 @@
                                     <div class="panel-title" id="chartTrendTitle">Comparativo de Eventos de Segurança (2025 - 2026)</div>
                                 </div>
                             </div>
-                            <div class="chart-container" style="min-height: 220px;">
+                            <div class="chart-container" id="trendChartContainer" style="min-height: 220px;">
                                 <canvas id="monthlyTrendChart"></canvas>
                             </div>
                         </div>
                     </div>
 
-                    <div class="panel-card" class="panel-card print-page-break" id="eventsTableCard">
+                    <div class="panel-card" id="eventsTableCard">
                         <div class="panel-header">
                             <div>
                                 <div class="panel-title" id="tableEventsTitle">Quadro Comparativo de Eventos de Segurança (2025 - 2026)</div>
@@ -1316,7 +1332,7 @@
             </div>
 
             <!-- SEÇÃO 2: COMPARATIVO POR UNIDADE -->
-            <div class="section-block">
+            <div class="section-block print-page-break" id="sec2Block">
                 <div class="section-header">
                     <div>
                         <div class="section-title" id="sec2Title">2. Comparativo por Unidade</div>
@@ -1334,12 +1350,12 @@
                             <div class="panel-title" id="benchmarkChartTitle">Comparativo Absoluto (2025 - 2026)</div>
                         </div>
                     </div>
-                    <div class="chart-container" style="min-height: 320px;">
+                    <div class="chart-container" id="benchmarkChartContainer" style="min-height: 320px;">
                         <canvas id="benchmarkChart"></canvas>
                     </div>
                 </div>
 
-                <div class="panel-card" class="panel-card print-page-break" id="unitsTableCard">
+                <div class="panel-card" id="unitsTableCard">
                     <div class="panel-header">
                         <div>
                             <div class="panel-title" id="unitsTableTitle">Quadro Comparativo por Unidade (2025 - 2026)</div>
@@ -1368,7 +1384,7 @@
             </div>
 
             <!-- SEÇÃO 3: COMPARATIVO POR EVENTO DE SEGURANÇA -->
-            <div class="section-block" class="section-block print-page-break" id="sec3Block">
+            <div class="section-block print-page-break" id="sec3Block">
                 <div class="section-header">
                     <div>
                         <div class="section-title">3. Comparativo por Evento de Segurança (2025 - 2026)</div>
@@ -8809,7 +8825,7 @@
                         if (val === undefined || val === null || val === 0) return;
 
                         ctx.save();
-                        ctx.font = '700 11px "Inter", -apple-system, sans-serif';
+                        ctx.font = isPrinting ? '700 9.5px "Inter", -apple-system, sans-serif' : '700 11px "Inter", -apple-system, sans-serif';
                         ctx.fillStyle = textColor;
 
                         if (chart.options.indexAxis === 'y') {
@@ -9270,19 +9286,32 @@
                         }
                     },
                     plugins: {
-                        legend: { labels: { color: '#cbd5e1', boxWidth: 12, font: { size: 11 } } },
+                        legend: { 
+                            labels: { 
+                                color: isPrinting ? '#000000' : '#cbd5e1', 
+                                boxWidth: 12, 
+                                font: { size: 10.5, weight: '700' } 
+                            } 
+                        },
                         tooltip: { backgroundColor: '#182238', titleColor: '#fff', bodyColor: '#e2e8f0' }
                     },
                     scales: {
                         x: {
                             beginAtZero: true,
                             grace: '15%',
-                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                            ticks: { color: '#94a3b8', precision: 0 }
+                            grid: { color: isPrinting ? '#cbd5e1' : 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { 
+                                color: isPrinting ? '#000000' : '#94a3b8', 
+                                precision: 0, 
+                                font: { size: 9, weight: isPrinting ? '700' : 'normal' } 
+                            }
                         },
                         y: {
                             grid: { display: false },
-                            ticks: { color: '#f1f5f9', font: { size: 11, weight: '600' } }
+                            ticks: { 
+                                color: isPrinting ? '#000000' : '#f1f5f9', 
+                                font: { size: 10, weight: '700', family: '"Inter", -apple-system, sans-serif' } 
+                            }
                         }
                     }
                 }
@@ -9360,7 +9389,13 @@
                         }
                     },
                     plugins: {
-                        legend: { labels: { color: '#cbd5e1', boxWidth: 12, font: { size: 11 } } },
+                        legend: { 
+                            labels: { 
+                                color: isPrinting ? '#000000' : '#cbd5e1', 
+                                boxWidth: 12, 
+                                font: { size: 10.5, weight: '700' } 
+                            } 
+                        },
                         tooltip: {
                             mode: 'index',
                             intersect: false,
@@ -9371,14 +9406,21 @@
                     },
                     scales: {
                         x: {
-                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
-                            ticks: { color: '#94a3b8', font: { size: 11 } }
+                            grid: { color: isPrinting ? '#e2e8f0' : 'rgba(255, 255, 255, 0.04)' },
+                            ticks: { 
+                                color: isPrinting ? '#000000' : '#94a3b8', 
+                                font: { size: 9.5, weight: isPrinting ? '700' : 'normal' } 
+                            }
                         },
                         y: {
                             beginAtZero: true,
                             grace: '18%',
-                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                            ticks: { color: '#94a3b8', precision: 0 }
+                            grid: { color: isPrinting ? '#e2e8f0' : 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { 
+                                color: isPrinting ? '#000000' : '#94a3b8', 
+                                precision: 0, 
+                                font: { size: 9, weight: isPrinting ? '700' : 'normal' } 
+                            }
                         }
                     }
                 }
@@ -9533,19 +9575,35 @@
                         }
                     },
                     plugins: {
-                        legend: { labels: { color: '#cbd5e1', boxWidth: 12, font: { size: 11 } } },
+                        legend: { 
+                            labels: { 
+                                color: isPrinting ? '#000000' : '#cbd5e1', 
+                                boxWidth: 12, 
+                                font: { size: 10.5, weight: '700' } 
+                            } 
+                        },
                         tooltip: { backgroundColor: '#182238', titleColor: '#fff', bodyColor: '#e2e8f0' }
                     },
                     scales: {
                         x: {
                             grid: { display: false },
-                            ticks: { color: '#e2e8f0', font: { weight: '600', size: 11 } }
+                            ticks: { 
+                                color: isPrinting ? '#000000' : '#e2e8f0', 
+                                font: { weight: '700', size: isPrinting ? 8 : 10 },
+                                autoSkip: false,
+                                maxRotation: isPrinting ? 45 : 30,
+                                minRotation: isPrinting ? 45 : 0
+                            }
                         },
                         y: {
                             beginAtZero: true,
                             grace: '15%',
-                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                            ticks: { color: '#94a3b8', precision: 0 }
+                            grid: { color: isPrinting ? '#e2e8f0' : 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { 
+                                color: isPrinting ? '#000000' : '#94a3b8', 
+                                precision: 0,
+                                font: { size: 9, weight: isPrinting ? '700' : 'normal' }
+                            }
                         }
                     }
                 }
