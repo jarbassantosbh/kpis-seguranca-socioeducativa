@@ -403,6 +403,7 @@
             letter-spacing: -0.01em;
         }
 
+        .sec1-stat-val { color: #ffffff; font-weight: 700; }
         .section-subtitle {
             font-size: 0.78rem;
             color: var(--text-secondary);
@@ -936,8 +937,9 @@
                 padding-bottom: 2px !important;
             }
 
-            .section-subtitle {
-                color: #475569 !important;
+            .section-subtitle, #sec1StatsSubtitle, #sec1StatsSubtitle strong, .sec1-stat-val {
+                color: #000000 !important;
+                font-weight: 700 !important;
                 font-size: 7.8pt !important;
                 margin-top: 2px !important;
             }
@@ -9250,7 +9252,7 @@
 
             const subEl = document.getElementById('sec1StatsSubtitle');
             if (subEl) {
-                subEl.innerHTML = 'Média mensal: <strong style="color:#fff;">' + avg26 + '</strong> ocorrências • Mediana: <strong style="color:#fff;">' + med26 + '</strong> ocorrências (2026)';
+                subEl.innerHTML = 'Média mensal: <strong class="sec1-stat-val">' + avg26 + '</strong> ocorrências • Mediana: <strong class="sec1-stat-val">' + med26 + '</strong> ocorrências (2026)';
             }
         }
 
@@ -9607,7 +9609,7 @@
                 tr.innerHTML =
                     '<td><strong>' + ev.label + '</strong></td>' +
                     '<td class="num">' + ev.v25 + '</td>' +
-                    '<td class="num" style="font-weight:700; color:#fff;">' + ev.v26 + '</td>' +
+                    '<td class="num" style="font-weight:700;">' + ev.v26 + '</td>' +
                     '<td class="num" style="color:' + diffColor + '; font-weight:700;">' + sign + ev.diff + '</td>' +
                     '<td class="num" style="color:' + diffColor + '; font-weight:700;">' + pctText + '</td>' +
                     '<td class="num"><span class="bar-inline" style="width:' + Math.max(2, barW * 0.6) + 'px;"></span>' + ev.share + '%</td>' +
@@ -9806,7 +9808,7 @@
                     '<td><strong>' + u.unit + '</strong></td>' +
                     '<td class="num">' + u.v25_ytd + '</td>' +
                     '<td style="border-right: 2px solid var(--border-color);">' + u.topEv25 + '</td>' +
-                    '<td class="num" style="font-weight:700; color:#fff;">' + u.v26 + '</td>' +
+                    '<td class="num" style="font-weight:700;">' + u.v26 + '</td>' +
                     '<td>' + u.topEv26 + '</td>' +
                     '<td class="num" style="color:' + diffColor + '; font-weight:700;">' + sign + u.diff + '</td>' +
                     '<td class="num" style="color:' + diffColor + '; font-weight:700;">' + pctText + '</td>' +
