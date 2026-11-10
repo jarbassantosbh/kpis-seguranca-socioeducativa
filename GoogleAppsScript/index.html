@@ -368,6 +368,10 @@
         .badge-down-good { background: rgba(16, 185, 129, 0.16); color: #34d399; }
         .badge-neutral { background: rgba(148, 163, 184, 0.16); color: #94a3b8; }
 
+        .stat-diff-up { color: #f87171; }
+        .stat-diff-down { color: #34d399; }
+        .stat-diff-neutral { color: #94a3b8; }
+
         .kpi-footer {
             font-size: 0.75rem;
             color: var(--text-secondary);
@@ -913,6 +917,10 @@
                 padding-top: 3px !important;
                 margin-top: 3px !important;
             }
+
+            .stat-diff-up { color: #b91c1c !important; font-weight: 700 !important; }
+            .stat-diff-down { color: #047857 !important; font-weight: 700 !important; }
+            .stat-diff-neutral { color: #334155 !important; font-weight: 700 !important; }
 
             /* Seções e Títulos */
             .section-block {
@@ -8885,7 +8893,7 @@
         function updatePrintMeta() {
             var filterUnitDesc = currentUnit === 'ALL' ? 'Todas as Unidades' : currentUnit;
             var filterEvtDesc = currentEvent === 'ALL' ? 'Todos os Eventos' : (EVENT_LABELS[currentEvent] || currentEvent);
-            var filterMonthDesc = currentMonth === 'ALL' ? 'Acumulado 2026 (10 meses)' : currentMonth + ' de 2026';
+            var filterMonthDesc = PERIOD_DESCRIPTIONS[currentMonth] || (currentMonth + ' de 2026');
             var metaEl = document.getElementById('printActiveFilters');
             if (metaEl) {
                 metaEl.textContent = 'Filtros: ' + filterUnitDesc + ' • ' + filterEvtDesc + ' • ' + filterMonthDesc;
@@ -8979,6 +8987,21 @@
             renderAll();
         });
 
+                const QUARTER_MONTHS = {
+            'Q1': ['Janeiro', 'Fevereiro', 'Março'],
+            'Q2': ['Abril', 'Maio', 'Junho'],
+            'Q3': ['Julho', 'Agosto', 'Setembro'],
+            'Q4': ['Outubro'] // 2026 apurado até Outubro (homólogo)
+        };
+
+        const PERIOD_DESCRIPTIONS = {
+            'ALL': 'Acumulado 2026 (10 meses)',
+            'Q1': '1º Trimestre (Jan-Mar) de 2026',
+            'Q2': '2º Trimestre (Abr-Jun) de 2026',
+            'Q3': '3º Trimestre (Jul-Set) de 2026',
+            'Q4': '4º Trimestre (Outubro - em andamento) de 2026'
+        };
+
         function getActiveEventKeys() {
             if (scopeMode === 'STRICT' && currentEvent !== 'tentativa_autoexterminio') {
                 return ALL_EVENT_KEYS.filter(k => k !== 'tentativa_autoexterminio');
@@ -8995,21 +9018,48 @@
                 uSelect.appendChild(opt);
             });
 
+            // 1. Eventos em ordem alfabética (com "Todos os Eventos de Segurança" em 1º)
             const eSelect = document.getElementById('eventSelect');
-            ALL_EVENT_KEYS.forEach(k => {
+            const sortedEventKeys = [...ALL_EVENT_KEYS].sort((a, b) => {
+                const labelA = EVENT_LABELS[a] || a;
+                const labelB = EVENT_LABELS[b] || b;
+                return labelA.localeCompare(labelB, 'pt-BR');
+            });
+            sortedEventKeys.forEach(k => {
                 const opt = document.createElement('option');
                 opt.value = k;
                 opt.textContent = EVENT_LABELS[k];
                 eSelect.appendChild(opt);
             });
 
+            // 2. Período: Acumulado, Trimestres e Meses Individuais
             const mSelect = document.getElementById('monthSelect');
+            
+            const groupTrimestres = document.createElement('optgroup');
+            groupTrimestres.label = 'Trimestres';
+            const trimestres = [
+                { val: 'Q1', label: '1° Trimestre (Jan - Mar)' },
+                { val: 'Q2', label: '2° Trimestre (Abr - Jun)' },
+                { val: 'Q3', label: '3° Trimestre (Jul - Set)' },
+                { val: 'Q4', label: '4° Trimestre (Out - em andamento)' }
+            ];
+            trimestres.forEach(t => {
+                const opt = document.createElement('option');
+                opt.value = t.val;
+                opt.textContent = t.label;
+                groupTrimestres.appendChild(opt);
+            });
+            mSelect.appendChild(groupTrimestres);
+
+            const groupMeses = document.createElement('optgroup');
+            groupMeses.label = 'Meses Individuais';
             RAW_DATA.meses_2025.forEach(m => {
                 const opt = document.createElement('option');
                 opt.value = m;
                 opt.textContent = m;
-                mSelect.appendChild(opt);
+                groupMeses.appendChild(opt);
             });
+            mSelect.appendChild(groupMeses);
         }
 
         function switchTab(tabId, btn) {
@@ -9097,8 +9147,9 @@
         }
 
         function getActiveMonths() {
-            if (currentMonth !== 'ALL') return [currentMonth];
-            return RAW_DATA.meses_2026; // Janeiro a Outubro
+            if (currentMonth === 'ALL') return RAW_DATA.meses_2026;
+            if (QUARTER_MONTHS[currentMonth]) return QUARTER_MONTHS[currentMonth];
+            return [currentMonth];
         }
 
         function getSummaryMetrics(unitFilter, eventFilter) {
@@ -9255,45 +9306,57 @@
         function generateExecutiveSummaryText(unit, event, month) {
             const stats = getSummaryMetrics(unit, event);
 
-            // 1. Sujeito
-            let sujeito = '';
-            if (unit === 'ALL') {
-                sujeito = 'As Unidades Socioeducativas tiveram no consolidado ';
-            } else {
-                sujeito = 'A unidade ' + unit + ' teve no consolidado ';
-            }
+            // 1. Sujeito e concordância verbal
+            const sujeito = unit === 'ALL' ? 'As Unidades Socioeducativas ' : ('A unidade ' + unit + ' ');
+            const verbo = unit === 'ALL' ? 'registraram ' : 'registrou ';
 
-            // 2. Variação
-            let variacao = '';
-            const pctVal = Math.abs(stats.pct).toFixed(1).replace('.', ',');
-            const diffVal = Math.abs(stats.diff);
+            // 2. Evento nome
+            const eventoNome = event === 'ALL' ? 'de Eventos de Segurança' : ('de ' + EVENT_LABELS[event]);
 
-            if (stats.diff > 0) {
-                variacao = 'um aumento de <strong style="color:#f87171;">' + pctVal + '% (▲ ' + diffVal + ')</strong> ';
-            } else if (stats.diff < 0) {
-                variacao = 'uma redução de <strong style="color:#34d399;">' + pctVal + '% (▼ ' + diffVal + ')</strong> ';
-            } else {
-                variacao = '<strong style="color:#cbd5e1;">estabilidade (0%)</strong> ';
-            }
-
-            // 3. Evento
-            let evento = '';
-            if (event === 'ALL') {
-                evento = 'de Eventos de Segurança ';
-            } else {
-                evento = 'de ' + EVENT_LABELS[event] + ' ';
-            }
-
-            // 4. Período
-            let periodo = '';
+            // 3. Período formatado
+            let periodoTexto = '';
             if (month === 'ALL') {
                 const nMonths = getActiveMonths().length;
-                periodo = 'no acumulado de ' + nMonths + ' meses em 2026.';
+                periodoTexto = 'no acumulado de ' + nMonths + ' meses em 2026 (Jan a Out)';
+            } else if (month === 'Q1') {
+                periodoTexto = 'no 1º Trimestre (Jan a Mar) de 2026 em comparação a 2025';
+            } else if (month === 'Q2') {
+                periodoTexto = 'no 2º Trimestre (Abr a Jun) de 2026 em comparação a 2025';
+            } else if (month === 'Q3') {
+                periodoTexto = 'no 3º Trimestre (Jul a Set) de 2026 em comparação a 2025';
+            } else if (month === 'Q4') {
+                periodoTexto = 'no 4º Trimestre (Outubro - em andamento) de 2026 em comparação a 2025';
             } else {
-                periodo = 'em ' + month + ' de 2026.';
+                periodoTexto = 'em ' + month + ' de 2026 em comparação a ' + month + ' de 2025';
             }
 
-            return sujeito + variacao + evento + periodo;
+            // Caso A: Zero ocorrências em ambos os anos
+            if (stats.v25_ytd === 0 && stats.v26 === 0) {
+                return sujeito + 'não registrou ocorrências ' + eventoNome + ' ' + periodoTexto + ' (zero registros em 2025 e 2026).';
+            }
+
+            // Caso B: Nova incidência (0 em 2025 e >0 em 2026)
+            if (stats.v25_ytd === 0 && stats.v26 > 0) {
+                const termoOcorr = stats.v26 === 1 ? '1 nova ocorrência' : (stats.v26 + ' novas ocorrências');
+                return sujeito + verbo + '<strong class="stat-diff-up">' + termoOcorr + ' (▲ ' + stats.v26 + ')</strong> ' + eventoNome + ' ' + periodoTexto + ' (sem registros no mesmo período de 2025).';
+            }
+
+            // Caso C: Variação normal (>0 em 2025)
+            const pctVal = Math.abs(stats.pct).toFixed(1).replace('.', ',');
+            const diffVal = Math.abs(stats.diff);
+            let variacao = '';
+
+            if (stats.diff > 0) {
+                variacao = 'um aumento de <strong class="stat-diff-up">' + pctVal + '% (▲ ' + diffVal + ')</strong>';
+            } else if (stats.diff < 0) {
+                variacao = 'uma redução de <strong class="stat-diff-down">' + pctVal + '% (▼ ' + diffVal + ')</strong>';
+            } else {
+                variacao = '<strong class="stat-diff-neutral">estabilidade (0%)</strong>';
+            }
+
+            const detalheValores = ' (de ' + stats.v25_ytd + ' para ' + stats.v26 + ' ocorrências)';
+
+            return sujeito + verbo + variacao + ' ' + eventoNome + ' ' + periodoTexto + detalheValores + '.';
         }
 
         function updateContextAndKPIs() {
