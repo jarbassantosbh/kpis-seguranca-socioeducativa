@@ -1390,6 +1390,7 @@
                     <div class="kpi-value-row">
                         <span class="kpi-value" id="kpiConcentrationVal">0%</span>
                     </div>
+                    <div class="kpi-footer" id="kpiConcentrationFoot">Base: Rede Estadual (0)</div>
                 </div>
             </div>
 
@@ -9343,20 +9344,25 @@
 
             const netAllStats = getSummaryMetrics('ALL', 'ALL');
             const unitAllStats = getSummaryMetrics(currentUnit, 'ALL');
+            const footEl = document.getElementById('kpiConcentrationFoot');
 
             if (currentUnit === 'ALL' && currentEvent === 'ALL') {
                 const partPct = netAllStats.v26 > 0 ? '100%' : '0%';
                 document.getElementById('kpiConcentrationVal').textContent = partPct;
+                if (footEl) footEl.textContent = 'Base: Rede Estadual (' + netAllStats.v26 + ')';
             } else if (currentUnit !== 'ALL' && currentEvent === 'ALL') {
                 const shareRede = netAllStats.v26 > 0 ? Math.round((unitAllStats.v26 / netAllStats.v26) * 1000) / 10 : 0;
                 document.getElementById('kpiConcentrationVal').textContent = shareRede + '%';
+                if (footEl) footEl.textContent = 'Base: Rede Estadual (' + unitAllStats.v26 + ' de ' + netAllStats.v26 + ')';
             } else if (currentUnit === 'ALL' && currentEvent !== 'ALL') {
                 const shareRede = netAllStats.v26 > 0 ? Math.round((stats.v26 / netAllStats.v26) * 1000) / 10 : 0;
                 document.getElementById('kpiConcentrationVal').textContent = shareRede + '%';
+                if (footEl) footEl.textContent = 'Base: Rede Estadual (' + stats.v26 + ' de ' + netAllStats.v26 + ')';
             } else {
-                // Quando há filtro de Unidade + Evento: reflete o percentual sobre o total de eventos totais da unidade
+                // Quando há filtro de Unidade + Evento: reflete o percentual sobre o total de eventos da própria unidade
                 const shareInUnit = unitAllStats.v26 > 0 ? Math.round((stats.v26 / unitAllStats.v26) * 1000) / 10 : 0;
                 document.getElementById('kpiConcentrationVal').textContent = shareInUnit + '%';
+                if (footEl) footEl.textContent = 'Base: Total da Unidade (' + stats.v26 + ' de ' + unitAllStats.v26 + ')';
             }
         }
 
