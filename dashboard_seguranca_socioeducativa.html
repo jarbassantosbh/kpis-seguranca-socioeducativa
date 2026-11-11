@@ -1276,7 +1276,11 @@
                 print-color-adjust: exact !important;
             }
 
-            header, .nav-tabs-bar, .toggle-group, .btn, footer, .powerbi-container {
+            header, .nav-tabs-bar, .toggle-group, .btn, .btn-card-expand, button, footer, .powerbi-container {
+                display: none !important;
+            }
+
+            .btn-card-expand {
                 display: none !important;
             }
 
@@ -2178,8 +2182,8 @@
                         <!-- Botão Tela Cheia (Foco Exclusivo no Demonstrativo) -->
                         <button class="btn btn-outline standalone-only-btn" id="btnStandaloneFullscreen" onclick="toggleElementFullscreen()" title="Expandir somente o demonstrativo em Tela Cheia">Tela Cheia</button>
                         
-                        <!-- Botão Voltar ao Painel Executivo -->
-                        <button class="btn btn-primary" id="btnBackToMain" onclick="switchTab('tabComparativo')">Painel Executivo</button>
+                        <!-- Botão Voltar ao Painel Executivo (visível somente na Nova Janela / Standalone) -->
+                        <button class="btn btn-primary standalone-only-btn" id="btnBackToMain" onclick="switchTab('tabComparativo')">Painel Executivo</button>
                     </div>
                 </div>
 
