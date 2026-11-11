@@ -540,16 +540,136 @@
         }
 
         
-        /* Quebra de linha inteligente para evitar corte no Quadro de Unidades */
-        #unitsSummaryTable {
-            width: 100%;
+        /* Quadro Comparativo por Unidade: Layout 100% calibrado sem barra de rolagem horizontal */
+        #unitsTableCard .table-wrapper {
+            overflow-x: hidden !important;
+            width: 100% !important;
         }
-        #unitsSummaryTable td:nth-child(3),
-        #unitsSummaryTable td:nth-child(5) {
-            white-space: normal;
-            line-height: 1.25;
-            min-width: 130px;
-            font-size: 0.76rem;
+
+        #unitsSummaryTable,
+        #expandedTableClone.units-table-clone {
+            width: 100% !important;
+            table-layout: fixed !important;
+            border-collapse: separate;
+            border-spacing: 0 2px;
+        }
+
+        #unitsSummaryTable thead th,
+        #expandedTableClone.units-table-clone thead th {
+            padding: 7px 3px !important;
+            font-size: 0.65rem !important;
+            font-weight: 700 !important;
+            white-space: normal !important;
+            line-height: 1.15 !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+        }
+
+        #unitsSummaryTable thead th:first-child,
+        #expandedTableClone.units-table-clone thead th:first-child {
+            text-align: left !important;
+            padding-left: 8px !important;
+        }
+
+        #unitsSummaryTable tbody td,
+        #expandedTableClone.units-table-clone tbody td {
+            padding: 5px 3px !important;
+            font-size: 0.72rem !important;
+            vertical-align: middle !important;
+        }
+
+        #unitsSummaryTable tfoot td,
+        #expandedTableClone.units-table-clone tfoot td {
+            padding: 6px 3px !important;
+            font-size: 0.74rem !important;
+            font-weight: 800 !important;
+            vertical-align: middle !important;
+        }
+
+        /* Coluna 1: UNIDADE */
+        #unitsSummaryTable th:nth-child(1), #unitsSummaryTable td:nth-child(1),
+        #expandedTableClone.units-table-clone th:nth-child(1), #expandedTableClone.units-table-clone td:nth-child(1) {
+            width: 14% !important;
+            padding-left: 8px !important;
+            white-space: normal !important;
+            line-height: 1.15 !important;
+            font-weight: 700 !important;
+        }
+
+        /* Coluna 2: 2025 */
+        #unitsSummaryTable th:nth-child(2), #unitsSummaryTable td:nth-child(2),
+        #expandedTableClone.units-table-clone th:nth-child(2), #expandedTableClone.units-table-clone td:nth-child(2) {
+            width: 5.5% !important;
+            text-align: center !important;
+        }
+
+        /* Coluna 3: MAIOR OCORRÊNCIA 2025 */
+        #unitsSummaryTable th:nth-child(3), #unitsSummaryTable td:nth-child(3),
+        #expandedTableClone.units-table-clone th:nth-child(3), #expandedTableClone.units-table-clone td:nth-child(3) {
+            width: 23% !important;
+            white-space: normal !important;
+            line-height: 1.15 !important;
+            font-size: 0.70rem !important;
+            padding: 5px 6px !important;
+            text-align: left !important;
+        }
+
+        /* Coluna 4: 2026 */
+        #unitsSummaryTable th:nth-child(4), #unitsSummaryTable td:nth-child(4),
+        #expandedTableClone.units-table-clone th:nth-child(4), #expandedTableClone.units-table-clone td:nth-child(4) {
+            width: 5.5% !important;
+            text-align: center !important;
+            font-weight: 700 !important;
+        }
+
+        /* Coluna 5: MAIOR OCORRÊNCIA 2026 */
+        #unitsSummaryTable th:nth-child(5), #unitsSummaryTable td:nth-child(5),
+        #expandedTableClone.units-table-clone th:nth-child(5), #expandedTableClone.units-table-clone td:nth-child(5) {
+            width: 23% !important;
+            white-space: normal !important;
+            line-height: 1.15 !important;
+            font-size: 0.70rem !important;
+            padding: 5px 6px !important;
+            text-align: left !important;
+        }
+
+        /* Coluna 6: Dif. (Δ) */
+        #unitsSummaryTable th:nth-child(6), #unitsSummaryTable td:nth-child(6),
+        #expandedTableClone.units-table-clone th:nth-child(6), #expandedTableClone.units-table-clone td:nth-child(6) {
+            width: 6% !important;
+            text-align: center !important;
+            font-weight: 700 !important;
+        }
+
+        /* Coluna 7: Var. (%) */
+        #unitsSummaryTable th:nth-child(7), #unitsSummaryTable td:nth-child(7),
+        #expandedTableClone.units-table-clone th:nth-child(7), #expandedTableClone.units-table-clone td:nth-child(7) {
+            width: 7% !important;
+            text-align: center !important;
+            font-weight: 700 !important;
+        }
+
+        /* Coluna 8: % UNID(2026) */
+        #unitsSummaryTable th:nth-child(8), #unitsSummaryTable td:nth-child(8),
+        #expandedTableClone.units-table-clone th:nth-child(8), #expandedTableClone.units-table-clone td:nth-child(8) {
+            width: 7.5% !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+        }
+
+        /* Coluna 9: STATUS */
+        #unitsSummaryTable th:nth-child(9), #unitsSummaryTable td:nth-child(9),
+        #expandedTableClone.units-table-clone th:nth-child(9), #expandedTableClone.units-table-clone td:nth-child(9) {
+            width: 8.5% !important;
+            text-align: center !important;
+        }
+
+        #unitsSummaryTable td:nth-child(9) .context-badge,
+        #expandedTableClone.units-table-clone td:nth-child(9) .context-badge {
+            font-size: 0.61rem !important;
+            padding: 2px 4px !important;
+            white-space: nowrap !important;
+            letter-spacing: 0.02em !important;
         }
 
         /* Events breakdown table spacing without horizontal scroll */
@@ -570,15 +690,16 @@
             line-height: 1.25;
         }
 
-        /* Matrix cell styles (full column names, zero horizontal scroll) */
+        /* Matrix cell styles (zero rolagem horizontal e ajuste dinâmico ao espaço) */
         .matrix-table {
             width: 100%;
             table-layout: fixed;
+            border-spacing: 0 2px;
         }
 
         .matrix-table th, .matrix-table td {
-            padding: 7px 4px;
-            font-size: 0.74rem;
+            padding: 5px 3px;
+            font-size: 0.72rem;
             border-right: 1px solid rgba(255, 255, 255, 0.04);
         }
 
@@ -586,22 +707,22 @@
             white-space: normal;
             word-wrap: break-word;
             overflow-wrap: break-word;
-            line-height: 1.2;
+            line-height: 1.15;
             vertical-align: middle;
-            font-size: 0.66rem;
-            padding: 8px 4px;
+            font-size: 0.65rem;
+            padding: 6px 3px;
         }
 
         .matrix-table th:first-child,
         .matrix-table td:first-child {
-            width: 145px;
+            width: 135px;
             white-space: nowrap;
             padding-left: 8px;
-            padding-right: 6px;
+            padding-right: 4px;
         }
 
         .matrix-table th:last-child, .matrix-table td:last-child {
-            width: 78px;
+            width: 68px;
             border-right: none;
         }
 
@@ -630,15 +751,15 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2px;
-            line-height: 1.2;
+            gap: 1px;
+            line-height: 1.1;
         }
 
         .m-pair {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-            font-size: 0.78rem;
+            gap: 3px;
+            font-size: 0.74rem;
         }
 
         .m-v25 {
@@ -648,7 +769,7 @@
 
         .m-arr {
             color: #475569;
-            font-size: 0.65rem;
+            font-size: 0.60rem;
         }
 
         .m-v26 {
@@ -658,10 +779,11 @@
 
         .m-pill {
             display: inline-block;
-            font-size: 0.66rem;
+            font-size: 0.64rem;
             font-weight: 700;
-            padding: 1px 5px;
+            padding: 0px 4px;
             border-radius: 999px;
+            line-height: 1.2;
         }
 
         .m-pill.up {
@@ -732,6 +854,371 @@
             background: #111;
         }
 
+        /* Container de Visualização Expandida (Tela Cheia) */
+        .expanded-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 145px);
+            min-height: 520px;
+        }
+
+        .expanded-header {
+            background: #111a2e;
+            padding: 8px 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .expanded-selector-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .expanded-selector-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .expanded-select {
+            background: #182238;
+            color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .expanded-select:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .expanded-body {
+            flex: 1;
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Elimina rolagem dupla; tabela interna rola se necessário */
+            position: relative;
+            min-height: 0;
+        }
+
+        .expanded-chart-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .expanded-chart-wrapper canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .expanded-table-wrapper {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 0;
+        }
+
+        /* Estilo da Matriz no modo Expandido para caber sem barra de rolagem */
+        #expandedTableMount .matrix-table {
+            width: 100%;
+            table-layout: fixed;
+            border-spacing: 0 1px;
+        }
+
+        #expandedTableMount .matrix-table th,
+        #expandedTableMount .matrix-table td {
+            padding: 3px 2px;
+            font-size: 0.68rem;
+        }
+
+        #expandedTableMount .matrix-table thead th {
+            padding: 4px 2px;
+            font-size: 0.63rem;
+            line-height: 1.1;
+        }
+
+        #expandedTableMount .matrix-table th:first-child,
+        #expandedTableMount .matrix-table td:first-child {
+            width: 125px;
+            font-size: 0.69rem;
+            padding-left: 6px;
+        }
+
+        #expandedTableMount .matrix-table th:last-child,
+        #expandedTableMount .matrix-table td:last-child {
+            width: 60px;
+        }
+
+        #expandedTableMount .m-box {
+            gap: 0px;
+            line-height: 1.05;
+        }
+
+        #expandedTableMount .m-pair {
+            gap: 2px;
+            font-size: 0.69rem;
+        }
+
+        #expandedTableMount .m-pill {
+            font-size: 0.60rem;
+            padding: 0px 3px;
+        }
+
+        /* Modo Standalone / Apresentação em Tela Cheia (Aba Externa do Navegador) */
+        body.standalone-mode header {
+            padding: 8px 20px;
+            background: #0f172a;
+            border-bottom: 1px solid var(--border-color);
+        }
+        body.standalone-mode .brand-section {
+            gap: 10px;
+        }
+        body.standalone-mode .brand-logo {
+            height: 28px;
+        }
+        body.standalone-mode .brand-titles h1 {
+            font-size: 0.95rem;
+        }
+        body.standalone-mode .brand-titles p {
+            display: none;
+        }
+        body.standalone-mode .nav-tabs-bar {
+            display: none;
+        }
+        body.standalone-mode footer {
+            display: none;
+        }
+        body.standalone-mode main {
+            padding: 8px 16px;
+        }
+        body.standalone-mode .expanded-container {
+            height: calc(100vh - 78px);
+            min-height: 480px;
+            border: 1px solid var(--border-color);
+        }
+        body.standalone-mode .expanded-header {
+            padding: 8px 16px;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+        body.standalone-mode .expanded-actions {
+            display: flex !important;
+            gap: 8px !important;
+            align-items: center !important;
+        }
+        body.standalone-mode .expanded-body {
+            padding: 10px 14px;
+        }
+        .expanded-standalone-title {
+            display: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        /* Regras de visibilidade dos botões: Aba Interna vs Nova Janela Standalone */
+        body:not(.standalone-mode) .standalone-only-btn {
+            display: none !important;
+        }
+        body:not(.standalone-mode) #linkOpenNewTab {
+            display: inline-block !important;
+        }
+
+        body.standalone-mode .expanded-standalone-title { display: inline; }
+        body.standalone-mode #expandedItemSelect,
+        body.standalone-mode #linkOpenNewTab,
+        body.standalone-mode #btnPrintReport { display: none !important; }
+
+        /* Na Nova Janela: exibe Baixar PNG, Baixar PDF e Tela Cheia */
+        body.standalone-mode .standalone-only-btn {
+            display: inline-block !important;
+        }
+        body.standalone-mode #btnBackToMain {
+            display: inline-block !important;
+        }
+
+        /* Menu dropdown do botão Baixar */
+        .download-dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .download-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 6px;
+            background: #182238;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+            min-width: 175px;
+            z-index: 100;
+            display: none;
+            overflow: hidden;
+        }
+
+        .download-menu.show {
+            display: block;
+        }
+
+        .download-menu-item {
+            width: 100%;
+            padding: 9px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.15s ease;
+        }
+
+        .download-menu-item:hover {
+            background: var(--bg-card-hover);
+            color: var(--accent-blue);
+        }
+
+        .download-menu-item:first-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .download-menu-badge {
+            font-size: 0.68rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Barra de Topo em Tela Cheia: Título do Demonstrativo e botão X para fechar */
+        .fullscreen-top-bar {
+            display: none;
+            width: 100%;
+            padding: 14px 24px;
+            background: #111a2e;
+            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            z-index: 1000;
+        }
+
+        :fullscreen .fullscreen-top-bar,
+        :-webkit-full-screen .fullscreen-top-bar {
+            display: flex !important;
+        }
+
+        .fullscreen-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
+
+        .btn-fullscreen-close {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #94a3b8;
+            font-size: 1.25rem;
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            line-height: 1;
+        }
+
+        .btn-fullscreen-close:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            color: #ffffff;
+        }
+
+        :fullscreen, :-webkit-full-screen {
+            background: #0b1120 !important;
+        }
+
+        :fullscreen #expandedBodyRegion,
+        :-webkit-full-screen #expandedBodyRegion {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100vh !important;
+            width: 100vw !important;
+            padding: 0 !important;
+            background: #0b1120 !important;
+            box-sizing: border-box !important;
+        }
+
+        :fullscreen #expandedChartBox,
+        :-webkit-full-screen #expandedChartBox {
+            flex: 1 !important;
+            height: calc(100vh - 65px) !important;
+            max-height: calc(100vh - 65px) !important;
+            padding: 16px 24px !important;
+            box-sizing: border-box !important;
+        }
+
+        :fullscreen #expandedTableBox,
+        :-webkit-full-screen #expandedTableBox {
+            flex: 1 !important;
+            height: calc(100vh - 65px) !important;
+            max-height: calc(100vh - 65px) !important;
+            overflow-y: auto !important;
+            padding: 16px 24px !important;
+            box-sizing: border-box !important;
+        }
+
+        .btn-card-expand {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-secondary);
+            border-radius: 4px;
+            padding: 2px 7px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            white-space: nowrap;
+        }
+
+        .btn-card-expand:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: var(--accent-blue);
+            color: #fff;
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
             padding: 12px 24px;
@@ -760,11 +1247,25 @@
             margin: 0 auto !important;
         }
 
-        /* OTIMIZAÇÃO ATÔMICA PARA IMPRESSÃO (A4 PAISAGEM PRETO E BRANCO) */
+        /* Título do Demonstrativo na Impressão Dedicada */
+        .standalone-print-doc-title {
+            font-size: 10.5pt !important;
+            font-weight: 800 !important;
+            color: #0284c7 !important;
+            margin-top: 3px !important;
+        }
+
+        /* OTIMIZAÇÃO ATÔMICA PARA IMPRESSÃO (A4 PRETO E BRANCO) */
         @media print {
             @page {
                 size: portrait;
                 margin: 8mm 8mm 8mm 8mm;
+            }
+
+            /* No modo Standalone / Demonstrativo Dedicado: Orientação Horizontal (Landscape) */
+            body.standalone-mode,
+            body.print-standalone {
+                /* landscape override */
             }
 
             body {
@@ -779,7 +1280,89 @@
                 display: none !important;
             }
 
-            #tabComparativo {
+            body:not(.standalone-mode):not(.print-standalone) .expanded-container {
+                display: none !important;
+            }
+
+            /* Em modo standalone, o tabExpanded é impresso como relatório dedicado HORIZONTAL */
+            body.standalone-mode #tabComparativo,
+            body.print-standalone #tabComparativo {
+                display: none !important;
+            }
+
+            body.standalone-mode .expanded-container,
+            body.print-standalone .expanded-container {
+                display: block !important;
+                border: none !important;
+                height: auto !important;
+                max-height: none !important;
+                background: #ffffff !important;
+            }
+
+            body.standalone-mode .expanded-header,
+            body.print-standalone .expanded-header {
+                display: none !important;
+            }
+
+            body.standalone-mode .expanded-body,
+            body.print-standalone .expanded-body {
+                padding: 0 !important;
+                overflow: visible !important;
+                height: auto !important;
+            }
+
+            .fullscreen-top-bar,
+            body.standalone-mode .fullscreen-top-bar,
+            body.print-standalone .fullscreen-top-bar {
+                display: none !important;
+            }
+
+            body.standalone-mode .print-report-header.standalone-print-header,
+            body.print-standalone .print-report-header.standalone-print-header {
+                display: block !important;
+                margin-bottom: 10px !important;
+                padding-bottom: 8px !important;
+                border-bottom: 2px solid #0f172a !important;
+            }
+
+            body.standalone-mode .expanded-chart-wrapper,
+            body.print-standalone .expanded-chart-wrapper {
+                height: 520px !important;
+                max-height: 520px !important;
+                page-break-inside: avoid !important;
+            }
+
+            body.standalone-mode .matrix-table,
+            body.print-standalone .matrix-table {
+                font-size: 6.8pt !important;
+                page-break-inside: avoid !important;
+            }
+
+            body.standalone-mode .matrix-table th,
+            body.standalone-mode .matrix-table td,
+            body.print-standalone .matrix-table th,
+            body.print-standalone .matrix-table td {
+                color: #000000 !important;
+                border: 1px solid #94a3b8 !important;
+                background: transparent !important;
+                padding: 3px 2px !important;
+            }
+
+            body.standalone-mode .matrix-table thead th,
+            body.print-standalone .matrix-table thead th {
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                font-weight: 800 !important;
+            }
+
+            body.standalone-mode .matrix-table tfoot td,
+            body.print-standalone .matrix-table tfoot td {
+                background: #e2e8f0 !important;
+                color: #0f172a !important;
+                font-weight: 800 !important;
+            }
+
+            body:not(.standalone-mode):not(.print-standalone) #tabComparativo {
                 display: block !important;
                 width: 100% !important;
                 max-width: 100% !important;
@@ -816,10 +1399,12 @@
             }
 
             .print-logo {
+                display: block !important;
                 height: 40px !important;
                 max-height: 40px !important;
                 width: auto !important;
                 object-fit: contain !important;
+                filter: none !important;
             }
 
             .print-main-title {
@@ -1307,7 +1892,7 @@
                 </div>
 
                 <button class="btn btn-outline" onclick="resetFilters()">Limpar Filtros</button>
-                <button class="btn btn-primary" onclick="printReport()">Imprimir Relatório</button>
+                <button class="btn btn-primary" id="btnPrintReport" onclick="printReport()">Imprimir Relatório</button>
             </div>
         </div>
     </header>
@@ -1316,7 +1901,10 @@
         <div class="nav-tabs-content">
             <div class="nav-tabs-left">
                 <button class="nav-tab-btn active" onclick="switchTab('tabComparativo', this)">
-                    Comparativo
+                    Painel Executivo
+                </button>
+                <button class="nav-tab-btn" id="tabBtnExpanded" onclick="switchTab('tabExpanded', this)">
+                    Visualização Expandida
                 </button>
                 <button class="nav-tab-btn" onclick="switchTab('tabPowerBi2026', this)">
                     Power BI 2026
@@ -1412,6 +2000,7 @@
                                 <div>
                                     <div class="panel-title" id="chartCatTitle">Demonstrativo de Eventos de Segurança (2025 - 2026)</div>
                                 </div>
+                                <button class="btn-card-expand" onclick="openExpandedView('chartCat')" title="Expandir Demonstrativo">Expandir</button>
                             </div>
                             <div class="chart-container" style="min-height: 250px;">
                                 <canvas id="categoryBarChart"></canvas>
@@ -1423,6 +2012,7 @@
                                 <div>
                                     <div class="panel-title" id="chartTrendTitle">Comparativo de Eventos de Segurança (2025 - 2026)</div>
                                 </div>
+                                <button class="btn-card-expand" onclick="openExpandedView('chartTrend')" title="Expandir Comparativo">Expandir</button>
                             </div>
                             <div class="chart-container" id="trendChartContainer" style="min-height: 220px;">
                                 <canvas id="monthlyTrendChart"></canvas>
@@ -1435,6 +2025,7 @@
                             <div>
                                 <div class="panel-title" id="tableEventsTitle">Quadro Comparativo de Eventos de Segurança (2025 - 2026)</div>
                             </div>
+                            <button class="btn-card-expand" onclick="openExpandedView('tableEvents')" title="Expandir Quadro Comparativo">Expandir</button>
                         </div>
                         <div class="table-wrapper">
                             <table class="dashboard-table" id="eventsBreakdownTable">
@@ -1475,6 +2066,7 @@
                         <div>
                             <div class="panel-title" id="benchmarkChartTitle">Comparativo Absoluto (2025 - 2026)</div>
                         </div>
+                        <button class="btn-card-expand" onclick="openExpandedView('chartBenchmark')" title="Expandir Comparativo Absoluto">Expandir</button>
                     </div>
                     <div class="chart-container" id="benchmarkChartContainer" style="min-height: 320px;">
                         <canvas id="benchmarkChart"></canvas>
@@ -1486,6 +2078,7 @@
                         <div>
                             <div class="panel-title" id="unitsTableTitle">Quadro Comparativo por Unidade (2025 - 2026)</div>
                         </div>
+                        <button class="btn-card-expand" onclick="openExpandedView('tableUnits')" title="Expandir Quadro por Unidade">Expandir</button>
                     </div>
                     <div class="table-wrapper">
                         <table class="dashboard-table" id="unitsSummaryTable">
@@ -1509,11 +2102,11 @@
                 </div>
             </div>
 
-            <!-- SEÇÃO 3: COMPARATIVO POR EVENTO DE SEGURANÇA -->
+            <!-- SEÇÃO 3: MATRIZ GERAL DE EVENTOS POR UNIDADE -->
             <div class="section-block" id="sec3Block">
                 <div class="section-header">
                     <div>
-                        <div class="section-title">3. Comparativo por Evento de Segurança (2025 - 2026)</div>
+                        <div class="section-title">3. Matriz Geral de Eventos por Unidade (2025-2026)</div>
                     </div>
                     <div class="toggle-group">
                         <button id="btnMatComp" class="toggle-btn active" onclick="setMatrixMode('COMP')">Comparativo (2025 vs 2026)</button>
@@ -1531,6 +2124,7 @@
                             <span><span class="legend-dot" style="background:#ef4444;"></span>Aumento</span>
                             <span><span class="legend-dot" style="background:#10b981;"></span>Redução</span>
                         </div>
+                        <button class="btn-card-expand" onclick="openExpandedView('tableMatrix')" title="Expandir Matriz Geral">Expandir</button>
                     </div>
                     <div class="table-wrapper">
                         <table class="dashboard-table matrix-table" id="unitEventMatrixTable">
@@ -1542,6 +2136,89 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- TAB EXPANDED: VISUALIZAÇÃO EXPANDIDA -->
+        <div id="tabExpanded" class="tab-pane">
+            <div class="expanded-container">
+                <div class="expanded-header">
+                    <div class="expanded-selector-group">
+                        <span id="expandedStandaloneTitle" class="expanded-standalone-title"></span>
+                        <select id="expandedItemSelect" class="expanded-select" onchange="onExpandedItemChange()">
+                            <optgroup label="Gráficos">
+                                <option value="chartCat">Demonstrativo de Eventos de Segurança</option>
+                                <option value="chartTrend">Comparativo de Eventos (Evolução Temporal)</option>
+                                <option value="chartBenchmark">Comparativo Absoluto por Unidade</option>
+                            </optgroup>
+                            <optgroup label="Quadros Comparativos">
+                                <option value="tableEvents">Quadro Comparativo de Eventos de Segurança</option>
+                                <option value="tableUnits">Quadro Comparativo por Unidade</option>
+                                <option value="tableMatrix">Matriz Geral de Eventos por Unidade</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="expanded-actions" id="expandedActionsBar" style="display: flex; gap: 8px; align-items: center;">
+                        <!-- Botão visível exclusivamente na aba interna de Visualização Expandida -->
+                        <a id="linkOpenNewTab" href="#" target="_blank" class="btn btn-outline" title="Abrir esta visualização em nova aba do navegador com filtros dinâmicos" onmouseenter="updateNewTabHref(this)" onfocus="updateNewTabHref(this)" onclick="updateNewTabHref(this)">Abrir em Nova Aba</a>
+                        
+                        <!-- Botão Baixar com dropdown de opções (visível na Nova Janela) -->
+                        <div class="download-dropdown-wrapper standalone-only-btn" id="downloadDropdownWrapper">
+                            <button class="btn btn-outline" id="btnDownloadDropdown" onclick="toggleDownloadMenu(event)" title="Opções de Download">Baixar</button>
+                            <div class="download-menu" id="downloadMenu">
+                                <button class="download-menu-item" onclick="downloadCurrentViewPng()">
+                                    <span>Baixar PNG</span>
+                                </button>
+                                <button class="download-menu-item" onclick="downloadCurrentViewPdf()">
+                                    <span>Baixar PDF</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Botão Tela Cheia (Foco Exclusivo no Demonstrativo) -->
+                        <button class="btn btn-outline standalone-only-btn" id="btnStandaloneFullscreen" onclick="toggleElementFullscreen()" title="Expandir somente o demonstrativo em Tela Cheia">Tela Cheia</button>
+                        
+                        <!-- Botão Voltar ao Painel Executivo -->
+                        <button class="btn btn-primary" id="btnBackToMain" onclick="switchTab('tabComparativo')">Painel Executivo</button>
+                    </div>
+                </div>
+
+                <div class="expanded-body" id="expandedBodyRegion">
+                    <!-- Barra de Topo da Tela Cheia: Título do Demonstrativo e botão X para fechar -->
+                    <div class="fullscreen-top-bar" id="fullscreenTopBar">
+                        <div class="fullscreen-title" id="fullscreenDocTitle">Demonstrativo</div>
+                        <button class="btn-fullscreen-close" onclick="exitFullscreen()" title="Fechar Tela Cheia (ESC)">✕</button>
+                    </div>
+
+                    <!-- Cabeçalho exclusivo de impressão para o Demonstrativo Dedicado -->
+                    <div class="print-report-header standalone-print-header">
+                        <div class="print-header-top">
+                            <div class="print-brand">
+                                <img src="https://lh3.googleusercontent.com/d/1d7m01C6X2b8GZzcDmdX8rb8XMDZpF5P8" alt="Instituto Elo" class="print-logo">
+                                <div class="print-titles">
+                                    <h1 class="print-main-title">Painel Executivo de Eventos de Segurança</h1>
+                                    <p class="print-sub-title">Departamento de Monitoria e Socioeducação | Instituto Elo</p>
+                                    <div class="standalone-print-doc-title" id="standalonePrintDocTitle">Demonstrativo</div>
+                                </div>
+                            </div>
+                            <div class="print-meta-box">
+                                <span id="printEmissionDateStandalone">Relatório Gerencial</span>
+                                <span id="printActiveFiltersStandalone">Filtros: Consolidado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Container para Gráficos Expandidos -->
+                    <div id="expandedChartBox" class="expanded-chart-wrapper" style="display: flex;">
+                        <canvas id="expandedCanvas"></canvas>
+                    </div>
+
+                    <!-- Container para Tabelas Expandidas -->
+                    <div id="expandedTableBox" class="expanded-table-wrapper" style="display: none;">
+                        <div id="expandedTableMount"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- TAB 2: POWER BI 2026 -->
@@ -8886,6 +9563,8 @@
         let trendChartInst = null;
         let categoryChartInst = null;
         let benchmarkChartInst = null;
+        let expandedChartInst = null;
+        let currentExpandedItem = 'chartCat'; // 'chartCat' | 'chartTrend' | 'chartBenchmark' | 'tableEvents' | 'tableUnits' | 'tableMatrix'
 
                 // Controle de modo de impressão para renderização com alta resolução P&B
         var isPrinting = false;
@@ -8908,15 +9587,18 @@
         function setPrintMode(active) {
             if (isPrinting === active) return;
             isPrinting = active;
+            var isStandalone = document.body.classList.contains('standalone-mode') || document.body.classList.contains('print-standalone');
             if (active) {
                 document.body.classList.add('is-printing-report');
                 updatePrintMeta();
             } else {
                 document.body.classList.remove('is-printing-report');
             }
-            if (typeof renderCategoryChart === 'function') renderCategoryChart();
-            if (typeof renderTrendChart === 'function') renderTrendChart();
-            if (typeof renderBenchmarkChart === 'function') renderBenchmarkChart();
+            if (!isStandalone) {
+                if (typeof renderCategoryChart === 'function') renderCategoryChart();
+                if (typeof renderTrendChart === 'function') renderTrendChart();
+                if (typeof renderBenchmarkChart === 'function') renderBenchmarkChart();
+            }
         }
 
         window.addEventListener('beforeprint', function() {
@@ -8925,6 +9607,11 @@
 
         window.addEventListener('afterprint', function() {
             setPrintMode(false);
+            if (!document.body.classList.contains('standalone-mode')) {
+                document.body.classList.remove('print-standalone');
+                var s = document.getElementById('dynamicPrintLandscapeStyle');
+                if (s) s.remove();
+            }
         });
 
         function printReport() {
@@ -8982,12 +9669,138 @@
 
 
 
+        // Parâmetros injetados pelo servidor (doGet) via bloco JSON não executável.
+        // Fora do Apps Script (arquivo local), o bloco contém o scriptlet literal e o parse falha com segurança.
+        var SERVER_CONFIG = { params: {}, webAppUrl: '' };
+        function loadServerConfig() {
+            try {
+                var el = document.getElementById('serverConfigJson');
+                if (el) {
+                    var parsed = JSON.parse(el.textContent);
+                    if (parsed && typeof parsed === 'object') SERVER_CONFIG = parsed;
+                }
+            } catch (e) { /* execução local: sem parâmetros do servidor */ }
+        }
+
+        var VALID_VIEWS = ['chartCat', 'chartTrend', 'chartBenchmark', 'tableEvents', 'tableUnits', 'tableMatrix'];
+
         window.addEventListener('DOMContentLoaded', () => {
+            loadServerConfig();
             initFilters();
-            renderAll();
+            checkStandaloneMode();
         });
 
-                const QUARTER_MONTHS = {
+        function checkStandaloneMode() {
+            // 1ª fonte: servidor (Apps Script). 2ª fonte: URL local (arquivo HTML aberto direto).
+            var urlParams = new URLSearchParams(window.location.search);
+            var gasParams = (SERVER_CONFIG && SERVER_CONFIG.params) || {};
+            var pick = function (k) { return gasParams[k] || urlParams.get(k) || null; };
+
+            var viewParam = pick('view');
+            var unitParam = pick('unit');
+            var eventParam = pick('event');
+            var periodParam = pick('period');
+            var scopeParam = pick('scope');
+            var isStandalone = !!viewParam && VALID_VIEWS.indexOf(viewParam) !== -1;
+
+            if (unitParam && (RAW_DATA.unidades.includes(unitParam) || unitParam === 'ALL')) {
+                currentUnit = unitParam;
+                var uEl = document.getElementById('unitSelect');
+                if (uEl) uEl.value = currentUnit;
+            }
+            if (eventParam && (ALL_EVENT_KEYS.includes(eventParam) || eventParam === 'ALL')) {
+                currentEvent = eventParam;
+                var eEl = document.getElementById('eventSelect');
+                if (eEl) eEl.value = currentEvent;
+            }
+            if (periodParam) {
+                currentMonth = periodParam;
+                var mEl = document.getElementById('monthSelect');
+                if (mEl) mEl.value = currentMonth;
+            }
+            if (scopeParam === 'STRICT' || scopeParam === 'ALL') {
+                setScopeMode(scopeParam);
+            }
+
+            if (isStandalone) {
+                // Aba independente: somente cabeçalho + filtros + demonstrativo
+                document.body.classList.add('standalone-mode');
+                currentExpandedItem = viewParam;
+                var selEl = document.getElementById('expandedItemSelect');
+                if (selEl) selEl.value = viewParam;
+
+                var titleEl = document.getElementById('expandedStandaloneTitle');
+                if (titleEl && selEl && selEl.selectedIndex >= 0) {
+                    titleEl.textContent = selEl.options[selEl.selectedIndex].text;
+                }
+
+                var btnBack = document.getElementById('btnBackToMain');
+                if (btnBack) {
+                    btnBack.textContent = 'Painel Executivo';
+                    btnBack.onclick = function () { navigateTop(getWebAppBaseUrl()); };
+                }
+
+                // Injeta orientação landscape por padrão nas abas independentes de demonstrativo
+                var styleId = 'dynamicPrintLandscapeStyle';
+                if (!document.getElementById(styleId)) {
+                    var style = document.createElement('style');
+                    style.id = styleId;
+                    style.textContent = '@media print { @page { size: landscape !important; margin: 8mm !important; } }';
+                    document.head.appendChild(style);
+                }
+
+                switchTab('tabExpanded');
+            }
+
+            // Renderiza todas as fontes (o demonstrativo expandido clona as tabelas do painel)
+            renderAll();
+        }
+
+        // URL base oficial do Web App (preserva ambiente /dev em testes ou /exec em produção)
+        function getWebAppBaseUrl() {
+            // 1. Execução local via arquivo (file://)
+            if (window.location.protocol === 'file:') {
+                return window.location.href.split('?')[0];
+            }
+            // 2. Se o usuário estiver no ambiente de testes (/dev) no browser (verificado via document.referrer ou URL ativa)
+            var ref = document.referrer || '';
+            if (ref.indexOf('script.google.com') !== -1) {
+                if (ref.indexOf('/dev') !== -1) {
+                    return 'https://script.google.com/macros/s/AKfycbzrk3nQwvXTb2f7hfZjJCpVosuhkMhK4sNOoRR_C9g/dev';
+                }
+                if (ref.indexOf('/exec') !== -1) {
+                    return 'https://script.google.com/macros/s/AKfycbxlbSyOoaCUdKbywBwtd5KnTNzdhCvefG1TEMzo33oJ2szOyhVDLXI_A4__jVhO5Ms6/exec';
+                }
+                return ref.split('?')[0];
+            }
+            if (window.location.href.indexOf('script.google.com') !== -1) {
+                if (window.location.href.indexOf('/dev') !== -1) {
+                    return 'https://script.google.com/macros/s/AKfycbzrk3nQwvXTb2f7hfZjJCpVosuhkMhK4sNOoRR_C9g/dev';
+                }
+                if (window.location.href.indexOf('/exec') !== -1) {
+                    return 'https://script.google.com/macros/s/AKfycbxlbSyOoaCUdKbywBwtd5KnTNzdhCvefG1TEMzo33oJ2szOyhVDLXI_A4__jVhO5Ms6/exec';
+                }
+                return window.location.href.split('?')[0];
+            }
+            // 3. Configuração do servidor
+            var base = (SERVER_CONFIG && SERVER_CONFIG.webAppUrl) || '';
+            if (base) return base.split('?')[0];
+
+            // 4. Fallback padrão: ambiente de testes homologado (/dev)
+            return 'https://script.google.com/macros/s/AKfycbzrk3nQwvXTb2f7hfZjJCpVosuhkMhK4sNOoRR_C9g/dev';
+        }
+
+        // Navega a janela principal (fora do iframe do Apps Script)
+        function navigateTop(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            a.target = '_top';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        const QUARTER_MONTHS = {
             'Q1': ['Janeiro', 'Fevereiro', 'Março'],
             'Q2': ['Abril', 'Maio', 'Junho'],
             'Q3': ['Julho', 'Agosto', 'Setembro'],
@@ -9066,17 +9879,29 @@
             document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            if (btn) btn.classList.add('active');
+            if (btn) {
+                btn.classList.add('active');
+            } else if (tabId === 'tabExpanded') {
+                const btnExp = document.getElementById('tabBtnExpanded');
+                if (btnExp) btnExp.classList.add('active');
+            } else if (tabId === 'tabComparativo') {
+                const btnComp = document.querySelector('.nav-tab-btn[onclick*="tabComparativo"]');
+                if (btnComp) btnComp.classList.add('active');
+            }
 
-            const isComp = tabId === 'tabComparativo';
-            document.getElementById('headerFiltersBar').style.display = isComp ? 'flex' : 'none';
-            document.getElementById('scopeToggleGroup').style.display = isComp ? 'inline-flex' : 'none';
+            const showFilters = tabId === 'tabComparativo' || tabId === 'tabExpanded';
+            document.getElementById('headerFiltersBar').style.display = showFilters ? 'flex' : 'none';
+            document.getElementById('scopeToggleGroup').style.display = showFilters ? 'inline-flex' : 'none';
 
-            if (isComp) {
+            if (tabId === 'tabComparativo') {
                 setTimeout(() => {
                     if (trendChartInst) trendChartInst.resize();
                     if (categoryChartInst) categoryChartInst.resize();
                     if (benchmarkChartInst) benchmarkChartInst.resize();
+                }, 80);
+            } else if (tabId === 'tabExpanded') {
+                setTimeout(() => {
+                    renderExpandedView();
                 }, 80);
             }
         }
@@ -9279,6 +10104,9 @@
             renderBenchmarkChart();
             renderUnitsTable();
             renderMatrixTable();
+            if (document.getElementById('tabExpanded').classList.contains('active')) {
+                renderExpandedView();
+            }
         }
 
         
@@ -9840,7 +10668,7 @@
 
                 let statusHtml = '';
                 if (u.v26 === 0 && u.v25_ytd === 0) {
-                    statusHtml = '<span class="context-badge badge-info">SEM OCORRÊNCIAS</span>';
+                    statusHtml = '<span class="context-badge badge-info">ZERADO</span>';
                 } else if (u.diff < 0) {
                     statusHtml = '<span class="context-badge badge-success">REDUÇÃO</span>';
                 } else if (u.diff === 0) {
@@ -9873,8 +10701,8 @@
                     '<td>' + u.topEv26 + '</td>' +
                     '<td class="num" style="color:' + diffColor + '; font-weight:700;">' + sign + u.diff + '</td>' +
                     '<td class="num" style="color:' + diffColor + '; font-weight:700;">' + pctText + '</td>' +
-                    '<td class="num"><span class="bar-inline" style="width:' + Math.max(2, barW * 0.6) + 'px;"></span>' + u.share26 + '%</td>' +
-                    '<td>' + statusHtml + '</td>';
+                    '<td class="num" style="white-space:nowrap;"><span class="bar-inline" style="width:' + Math.min(20, Math.max(2, Math.round(barW * 0.25))) + 'px;"></span>' + u.share26 + '%</td>' +
+                    '<td style="text-align:center;">' + statusHtml + '</td>';
                 tbody.appendChild(tr);
             });
 
@@ -9888,13 +10716,13 @@
                 '<tr>' +
                     '<td>' + (currentUnit === 'ALL' ? 'TOTAL (13 UNIDADES)' : 'TOTAL (' + currentUnit.toUpperCase() + ')') + '</td>' +
                     '<td class="num">' + sum25_ytd + '</td>' +
-                    '<td style="border-right: 2px solid var(--border-color);">-</td>' +
+                    '<td style="border-right: 2px solid var(--border-color); text-align:center;">-</td>' +
                     '<td class="num">' + sum26 + '</td>' +
-                    '<td>-</td>' +
+                    '<td style="text-align:center;">-</td>' +
                     '<td class="num" style="color:' + totColor + ';">' + totSign + totDiff + '</td>' +
                     '<td class="num" style="color:' + totColor + ';">' + (sum25_ytd > 0 ? totSign + totPct + '%' : '-') + '</td>' +
                     '<td class="num">' + displayShare + '</td>' +
-                    '<td>-</td>' +
+                    '<td style="text-align:center;">-</td>' +
                 '</tr>';
         }
 
@@ -10027,6 +10855,588 @@
             document.getElementById('eventSelect').value = currentEvent;
             renderAll();
         }
+
+        /* CONTROLADORES DA VISUALIZAÇÃO EXPANDIDA (TELA CHEIA) */
+        function openExpandedView(itemKey) {
+            currentExpandedItem = itemKey;
+            const selectEl = document.getElementById('expandedItemSelect');
+            if (selectEl) selectEl.value = itemKey;
+            switchTab('tabExpanded');
+        }
+
+        function onExpandedItemChange() {
+            currentExpandedItem = document.getElementById('expandedItemSelect').value;
+            renderExpandedView();
+        }
+
+        function renderExpandedView() {
+            const chartBox = document.getElementById('expandedChartBox');
+            const tableBox = document.getElementById('expandedTableBox');
+            const btnDownload = document.getElementById('btnDownloadChartPng');
+            const tableMount = document.getElementById('expandedTableMount');
+
+            const isChart = currentExpandedItem.startsWith('chart');
+            if (isChart) {
+                chartBox.style.display = 'flex';
+                tableBox.style.display = 'none';
+                if (btnDownload) btnDownload.style.display = 'inline-block';
+                renderExpandedChart();
+            } else {
+                chartBox.style.display = 'none';
+                tableBox.style.display = 'block';
+                if (btnDownload) btnDownload.style.display = 'none';
+                renderExpandedTable(tableMount);
+            }
+            if (typeof updateNewTabHref === 'function') updateNewTabHref();
+            var fsTitle = document.getElementById('fullscreenDocTitle');
+            if (fsTitle) fsTitle.textContent = getActiveViewTitle();
+        }
+
+        function renderExpandedChart() {
+            const canvas = document.getElementById('expandedCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            if (expandedChartInst) expandedChartInst.destroy();
+
+            if (currentExpandedItem === 'chartCat') {
+                let events = getEventsBreakdown(currentUnit);
+                if (currentEvent !== 'ALL') {
+                    events = events.filter(e => e.key === currentEvent);
+                } else {
+                    events = events.filter(e => e.v26 > 0 || e.v25 > 0);
+                }
+                events.sort((a, b) => b.v26 - a.v26 || b.v25 - a.v25);
+
+                const labels = events.map(e => e.label);
+                const data26 = events.map(e => e.v26);
+                const data25 = events.map(e => e.v25);
+
+                expandedChartInst = new Chart(ctx, {
+                    type: 'bar',
+                    plugins: [chartValueLabelsPlugin],
+                    data: {
+                        labels,
+                        datasets: [
+                            {
+                                label: '2026',
+                                data: data26,
+                                backgroundColor: '#38bdf8',
+                                borderRadius: 4,
+                                maxBarThickness: 34
+                            },
+                            {
+                                label: '2025',
+                                data: data25,
+                                backgroundColor: '#64748b',
+                                borderRadius: 4,
+                                maxBarThickness: 34
+                            }
+                        ]
+                    },
+                    options: {
+                        devicePixelRatio: 2.5,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: { labels: { color: '#cbd5e1', boxWidth: 14, font: { size: 12, weight: '700' } } },
+                            tooltip: { backgroundColor: '#182238', titleColor: '#fff', bodyColor: '#e2e8f0', titleFont: { size: 13 } }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                grace: '15%',
+                                grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                                ticks: { color: '#94a3b8', font: { size: 11, weight: '600' } }
+                            },
+                            y: {
+                                grid: { display: false },
+                                ticks: { color: '#f1f5f9', font: { size: 12, weight: '700' } }
+                            }
+                        }
+                    }
+                });
+            } else if (currentExpandedItem === 'chartTrend') {
+                const months = getActiveMonths();
+                let r25 = RAW_DATA.data2025;
+                let r26 = RAW_DATA.data2026;
+                if (currentUnit !== 'ALL') {
+                    r25 = r25.filter(r => r.unidade === currentUnit);
+                    r26 = r26.filter(r => r.unidade === currentUnit);
+                }
+                const data25 = months.map(m => r25.filter(r => r.mes === m).reduce((acc, r) => acc + getRowValue(r), 0));
+                const data26 = months.map(m => r26.filter(r => r.mes === m).reduce((acc, r) => acc + getRowValue(r), 0));
+                const isSingleMonth = months.length === 1;
+
+                expandedChartInst = new Chart(ctx, {
+                    type: isSingleMonth ? 'bar' : 'line',
+                    plugins: [chartValueLabelsPlugin],
+                    data: {
+                        labels: months,
+                        datasets: [
+                            {
+                                label: '2026',
+                                data: data26,
+                                borderColor: '#38bdf8',
+                                backgroundColor: isSingleMonth ? '#38bdf8' : 'rgba(56, 189, 248, 0.15)',
+                                fill: !isSingleMonth,
+                                tension: 0.25,
+                                borderWidth: 3,
+                                borderRadius: isSingleMonth ? 4 : 0,
+                                pointBackgroundColor: '#38bdf8',
+                                pointRadius: 5
+                            },
+                            {
+                                label: '2025',
+                                data: data25,
+                                borderColor: '#94a3b8',
+                                backgroundColor: isSingleMonth ? '#64748b' : 'transparent',
+                                borderDash: isSingleMonth ? [] : [5, 4],
+                                borderWidth: 2.5,
+                                borderRadius: isSingleMonth ? 4 : 0,
+                                pointBackgroundColor: '#94a3b8',
+                                pointRadius: 4.5,
+                                tension: 0.25
+                            }
+                        ]
+                    },
+                    options: {
+                        devicePixelRatio: 2.5,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { labels: { color: '#cbd5e1', boxWidth: 14, font: { size: 12, weight: '700' } } },
+                            tooltip: { backgroundColor: '#182238', titleColor: '#fff', bodyColor: '#e2e8f0', titleFont: { size: 13 } }
+                        },
+                        scales: {
+                            x: {
+                                grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                                ticks: { color: '#94a3b8', font: { size: 11, weight: '600' } }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                grace: '15%',
+                                grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                                ticks: { color: '#94a3b8', precision: 0, font: { size: 11, weight: '600' } }
+                            }
+                        }
+                    }
+                });
+            } else if (currentExpandedItem === 'chartBenchmark') {
+                let unitData = getUnitsBreakdown(currentEvent);
+                if (currentUnit !== 'ALL') {
+                    unitData = unitData.filter(d => d.unit === currentUnit);
+                }
+                if (unitChartSort === 'v26') {
+                    unitData.sort((a, b) => b.v26 - a.v26 || b.v25_ytd - a.v25_ytd);
+                } else if (unitChartSort === 'diff') {
+                    unitData.sort((a, b) => b.diff - a.diff || b.v26 - a.v26);
+                } else {
+                    unitData.sort((a, b) => a.unit.localeCompare(b.unit));
+                }
+
+                const labels = unitData.map(d => d.unit);
+                const data26 = unitData.map(d => d.v26);
+                const data25 = unitData.map(d => d.v25_ytd);
+
+                expandedChartInst = new Chart(ctx, {
+                    type: 'bar',
+                    plugins: [chartValueLabelsPlugin],
+                    data: {
+                        labels,
+                        datasets: [
+                            {
+                                label: '2026',
+                                data: data26,
+                                backgroundColor: '#38bdf8',
+                                borderRadius: 4,
+                                maxBarThickness: 34
+                            },
+                            {
+                                label: '2025',
+                                data: data25,
+                                backgroundColor: '#64748b',
+                                borderRadius: 4,
+                                maxBarThickness: 34
+                            }
+                        ]
+                    },
+                    options: {
+                        devicePixelRatio: 2.5,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { labels: { color: '#cbd5e1', boxWidth: 14, font: { size: 12, weight: '700' } } },
+                            tooltip: { backgroundColor: '#182238', titleColor: '#fff', bodyColor: '#e2e8f0', titleFont: { size: 13 } }
+                        },
+                        scales: {
+                            x: {
+                                grid: { display: false },
+                                ticks: { color: '#e2e8f0', font: { weight: '700', size: 11.5 } }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                grace: '15%',
+                                grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                                ticks: { color: '#94a3b8', precision: 0, font: { size: 11, weight: '600' } }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        function renderExpandedTable(mountEl) {
+            mountEl.innerHTML = '';
+            let sourceTableId = '';
+            if (currentExpandedItem === 'tableEvents') {
+                sourceTableId = 'eventsBreakdownTable';
+            } else if (currentExpandedItem === 'tableUnits') {
+                sourceTableId = 'unitsSummaryTable';
+            } else if (currentExpandedItem === 'tableMatrix') {
+                sourceTableId = 'unitEventMatrixTable';
+            }
+
+            const sourceTable = document.getElementById(sourceTableId);
+            if (sourceTable) {
+                const clone = sourceTable.cloneNode(true);
+                clone.id = 'expandedTableClone';
+                if (currentExpandedItem === 'tableUnits') {
+                    clone.classList.add('units-table-clone');
+                }
+                mountEl.appendChild(clone);
+            }
+        }
+
+        // URL dedicada de cada demonstrativo (aba independente, padrão Power BI)
+        function getPresentationUrl(targetItem) {
+            var item = targetItem || currentExpandedItem || 'chartCat';
+            var params = new URLSearchParams();
+            params.set('view', item);
+            if (currentUnit !== 'ALL') params.set('unit', currentUnit);
+            if (currentEvent !== 'ALL') params.set('event', currentEvent);
+            if (currentMonth !== 'ALL') params.set('period', currentMonth);
+            if (scopeMode !== 'STRICT') params.set('scope', scopeMode);
+
+            var base = getWebAppBaseUrl();
+            return base + '?' + params.toString();
+        }
+
+        function updateNewTabHref(anchorEl) {
+            if (!anchorEl) anchorEl = document.getElementById('linkOpenNewTab');
+            if (anchorEl) {
+                anchorEl.href = getPresentationUrl();
+            }
+        }
+
+        function openDirectNewTab(itemKey, event) {
+            if (event) event.stopPropagation();
+            currentExpandedItem = itemKey;
+            var url = getPresentationUrl(itemKey);
+            window.open(url, '_blank');
+        }
+
+        /* CONTROLE DO MENU DROPDOWN DE DOWNLOAD */
+        function toggleDownloadMenu(e) {
+            if (e) e.stopPropagation();
+            var menu = document.getElementById('downloadMenu');
+            if (menu) menu.classList.toggle('show');
+        }
+
+        window.addEventListener('click', function (e) {
+            var menu = document.getElementById('downloadMenu');
+            if (menu && menu.classList.contains('show')) {
+                if (!e.target.closest('.download-dropdown-wrapper')) {
+                    menu.classList.remove('show');
+                }
+            }
+        });
+
+        /* CONTROLE DE TELA CHEIA (EXCLUSIVO PARA O DEMONSTRATIVO) */
+        function toggleElementFullscreen() {
+            var el = document.getElementById('expandedBodyRegion');
+            if (!el) return;
+
+            var titleEl = document.getElementById('fullscreenDocTitle');
+            if (titleEl) titleEl.textContent = getActiveViewTitle();
+
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+                if (el.requestFullscreen) {
+                    el.requestFullscreen();
+                } else if (el.webkitRequestFullscreen) {
+                    el.webkitRequestFullscreen();
+                } else if (el.msRequestFullscreen) {
+                    el.msRequestFullscreen();
+                }
+            } else {
+                exitFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+
+        /* FUNÇÕES DE DOWNLOAD (PNG COM CABEÇALHO E FILTROS / PDF FORMATADO) */
+        function getDownloadFilterText() {
+            var unitText = currentUnit === 'ALL' ? 'Todas as Unidades (13)' : currentUnit;
+            var eventText = currentEvent === 'ALL' ? 'Todos os Eventos' : (EVENT_LABELS[currentEvent] || currentEvent);
+            var periodText = PERIOD_DESCRIPTIONS[currentMonth] || currentMonth;
+            var scopeText = scopeMode === 'STRICT' ? 'Lista Patronizada' : 'Base Completa';
+            return 'Filtros: ' + unitText + ' • ' + eventText + ' • ' + periodText + ' • ' + scopeText;
+        }
+
+        function getActiveViewTitle() {
+            var sel = document.getElementById('expandedItemSelect');
+            if (sel && sel.selectedIndex >= 0) return sel.options[sel.selectedIndex].text;
+            return 'Demonstrativo de Segurança';
+        }
+
+        function downloadCurrentViewPng() {
+            var menu = document.getElementById('downloadMenu');
+            if (menu) menu.classList.remove('show');
+
+            var isChart = currentExpandedItem.startsWith('chart');
+
+            if (isChart && expandedChartInst) {
+                // Gráficos: compor canvas exclusivo com Nome do Demonstrativo no Cabeçalho
+                var chartCanvas = document.getElementById('expandedCanvas');
+                if (!chartCanvas) return;
+
+                var headerHeight = 60;
+                var compositeCanvas = document.createElement('canvas');
+                compositeCanvas.width = chartCanvas.width;
+                compositeCanvas.height = chartCanvas.height + headerHeight;
+
+                var ctx = compositeCanvas.getContext('2d');
+
+                // Fundo corporativo escuro
+                ctx.fillStyle = '#0b1120';
+                ctx.fillRect(0, 0, compositeCanvas.width, compositeCanvas.height);
+
+                // Faixa de cabeçalho
+                ctx.fillStyle = '#131c31';
+                ctx.fillRect(0, 0, compositeCanvas.width, headerHeight);
+
+                // Linha de borda divisória
+                ctx.strokeStyle = '#334155';
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.moveTo(0, headerHeight);
+                ctx.lineTo(compositeCanvas.width, headerHeight);
+                ctx.stroke();
+
+                // Cabeçalho: Nome do demonstrativo ou Gráfico
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 22px "Inter", -apple-system, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(getActiveViewTitle(), compositeCanvas.width / 2, headerHeight / 2);
+
+                // Desenhar gráfico abaixo do cabeçalho
+                ctx.drawImage(chartCanvas, 0, headerHeight);
+
+                var link = document.createElement('a');
+                link.download = currentExpandedItem + '_' + new Date().toISOString().slice(0, 10) + '.png';
+                link.href = compositeCanvas.toDataURL('image/png', 1.0);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                // Tabelas: renderiza a tabela em canvas de alta definição com fundo escuro e cabeçalho
+                var sourceTableId = '';
+                if (currentExpandedItem === 'tableEvents') sourceTableId = 'eventsBreakdownTable';
+                else if (currentExpandedItem === 'tableUnits') sourceTableId = 'unitsSummaryTable';
+                else if (currentExpandedItem === 'tableMatrix') sourceTableId = 'unitEventMatrixTable';
+
+                var tableEl = document.getElementById('expandedTableClone') || document.getElementById(sourceTableId);
+                var success = false;
+                if (tableEl && typeof exportTableToPng === 'function') {
+                    success = exportTableToPng(tableEl, getActiveViewTitle(), currentExpandedItem + '_' + new Date().toISOString().slice(0, 10) + '.png');
+                }
+                if (!success) {
+                    downloadCurrentViewPdf();
+                }
+            }
+        }
+
+        function exportTableToPng(tableEl, title, filename) {
+            try {
+                if (!tableEl) return false;
+                var rows = Array.from(tableEl.querySelectorAll('tr'));
+                if (rows.length === 0) return false;
+
+                var firstRowCells = Array.from(rows[0].children);
+                var colCount = firstRowCells.length;
+                if (colCount === 0) return false;
+
+                var colWidths = new Array(colCount).fill(110);
+                colWidths[0] = Math.max(220, colWidths[0]);
+
+                rows.forEach(function(r) {
+                    Array.from(r.children).forEach(function(cell, idx) {
+                        if (idx < colCount) {
+                            var textLen = cell.textContent.trim().length;
+                            var estWidth = textLen * 9 + 24;
+                            if (estWidth > colWidths[idx]) {
+                                colWidths[idx] = Math.min(estWidth, 340);
+                            }
+                        }
+                    });
+                });
+
+                var totalWidth = colWidths.reduce(function(a, b) { return a + b; }, 0) + 40;
+                var rowHeight = 30;
+                var headerHeight = 60;
+                var totalHeight = headerHeight + (rows.length * rowHeight) + 30;
+
+                var canvas = document.createElement('canvas');
+                canvas.width = Math.max(totalWidth, 1200);
+                canvas.height = totalHeight;
+                var ctx = canvas.getContext('2d');
+
+                // Fundo corporativo escuro
+                ctx.fillStyle = '#0b1120';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Faixa de cabeçalho
+                ctx.fillStyle = '#131c31';
+                ctx.fillRect(0, 0, canvas.width, headerHeight);
+
+                // Linha divisória
+                ctx.strokeStyle = '#334155';
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.moveTo(0, headerHeight);
+                ctx.lineTo(canvas.width, headerHeight);
+                ctx.stroke();
+
+                // Título: Nome do demonstrativo ou Gráfico
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 22px "Inter", -apple-system, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(title, canvas.width / 2, headerHeight / 2);
+
+                // Desenhar linhas da tabela
+                var currentY = headerHeight + 15;
+                var startX = Math.max(20, (canvas.width - colWidths.reduce(function(a, b) { return a + b; }, 0)) / 2);
+
+                rows.forEach(function(row, rIdx) {
+                    var isHeader = row.parentElement && row.parentElement.tagName.toLowerCase() === 'thead';
+                    var isFooter = row.parentElement && row.parentElement.tagName.toLowerCase() === 'tfoot';
+                    var cells = Array.from(row.children);
+                    var rowW = colWidths.reduce(function(a, b) { return a + b; }, 0);
+
+                    if (isHeader || isFooter) {
+                        ctx.fillStyle = '#1e293b';
+                    } else {
+                        ctx.fillStyle = (rIdx % 2 === 0) ? '#0f172a' : '#182238';
+                    }
+                    ctx.fillRect(startX, currentY, rowW, rowHeight);
+
+                    ctx.strokeStyle = '#334155';
+                    ctx.lineWidth = 1;
+                    ctx.strokeRect(startX, currentY, rowW, rowHeight);
+
+                    var currentX = startX;
+                    cells.forEach(function(cell, cIdx) {
+                        if (cIdx < colCount) {
+                            var cellW = colWidths[cIdx];
+                            var text = cell.textContent.trim().replace(/\s+/g, ' ');
+                            var isNum = cell.classList.contains('num') || (!isNaN(parseFloat(text)) && isFinite(text) && cIdx > 0);
+
+                            ctx.font = (isHeader || isFooter) ? 'bold 11px "Inter", sans-serif' : '11px "Inter", sans-serif';
+
+                            if (isHeader || isFooter) {
+                                ctx.fillStyle = '#f8fafc';
+                            } else if (cell.classList.contains('stat-diff-up') || cell.classList.contains('badge-danger')) {
+                                ctx.fillStyle = '#f87171';
+                            } else if (cell.classList.contains('stat-diff-down') || cell.classList.contains('badge-success')) {
+                                ctx.fillStyle = '#34d399';
+                            } else if (cIdx === 1) {
+                                ctx.fillStyle = '#94a3b8';
+                            } else if (cIdx === 2) {
+                                ctx.fillStyle = '#38bdf8';
+                            } else {
+                                ctx.fillStyle = '#e2e8f0';
+                            }
+
+                            ctx.textBaseline = 'middle';
+                            if (isNum && !isHeader) {
+                                ctx.textAlign = 'right';
+                                ctx.fillText(text, currentX + cellW - 10, currentY + rowHeight / 2);
+                            } else {
+                                ctx.textAlign = isHeader ? (isNum ? 'right' : 'left') : 'left';
+                                var posX = isHeader && isNum ? (currentX + cellW - 10) : (currentX + 10);
+                                ctx.fillText(text, posX, currentY + rowHeight / 2);
+                            }
+
+                            ctx.strokeStyle = '#334155';
+                            ctx.beginPath();
+                            ctx.moveTo(currentX + cellW, currentY);
+                            ctx.lineTo(currentX + cellW, currentY + rowHeight);
+                            ctx.stroke();
+
+                            currentX += cellW;
+                        }
+                    });
+
+                    currentY += rowHeight;
+                });
+
+                var link = document.createElement('a');
+                link.download = filename || ('tabela_' + new Date().toISOString().slice(0, 10) + '.png');
+                link.href = canvas.toDataURL('image/png', 1.0);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                return true;
+            } catch (e) {
+                console.error('Erro ao exportar tabela para PNG:', e);
+                return false;
+            }
+        }
+
+        function downloadCurrentViewPdf() {
+            var menu = document.getElementById('downloadMenu');
+            if (menu) menu.classList.remove('show');
+
+            // Atualiza metadados do cabeçalho standalone
+            var docTitleEl = document.getElementById('standalonePrintDocTitle');
+            if (docTitleEl) docTitleEl.textContent = getActiveViewTitle();
+
+            var dateEl = document.getElementById('printEmissionDateStandalone');
+            if (dateEl) dateEl.textContent = 'Emissão: ' + new Date().toLocaleString('pt-BR');
+
+            var filterEl = document.getElementById('printActiveFiltersStandalone');
+            if (filterEl) filterEl.textContent = getDownloadFilterText();
+
+            // Injeta regra @page dinâmica para garantir orientação Horizontal (Landscape) no documento do demonstrativo
+            var styleId = 'dynamicPrintLandscapeStyle';
+            var existingStyle = document.getElementById(styleId);
+            if (!existingStyle) {
+                var style = document.createElement('style');
+                style.id = styleId;
+                style.textContent = '@media print { @page { size: landscape !important; margin: 8mm !important; } }';
+                document.head.appendChild(style);
+            } else {
+                existingStyle.textContent = '@media print { @page { size: landscape !important; margin: 8mm !important; } }';
+            }
+
+            document.body.classList.add('print-standalone');
+            setTimeout(function() {
+                window.print();
+            }, 150);
+        }
     </script>
+    <!-- Configuração injetada pelo servidor (doGet). Bloco JSON não executável. -->
+    <script type="application/json" id="serverConfigJson"><?!= serverParamsJson ?></script>
 </body>
 </html>
